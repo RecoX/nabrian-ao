@@ -1,0 +1,4939 @@
+Attribute VB_Name = "Module1"
+' TIPOS NPC
+' 0====== NPCS COMUNES
+' 1====== PUEDE RESUCITAR
+' 2====== GUARDIA
+' 3====== PUEDE ENTRENAR
+' 4====== BANQUEROS
+' 5====== NOBLES
+' 6====== DRAGONES
+' 7====== APOSTADORES
+' 8====== TIENDAS
+' habla=Numero para que hable el npc
+[INIT]
+NumNPCs = 253
+
+[NPC1] 'NPC
+Name = Aldeano
+Desc= La gente del pueblo esta atemorizada, pues se dice que el mal ha vuelto. No sabemos cuanto nos podrá ayudar el imperio, es por ello que muchos de los nuestros están yendose de las Tierras del Fénix y tantos otros preparándose para la guerra...
+Head = 0
+Body = 18
+Heading = 3
+Movement = 2
+Comercia = 1
+Alineacion = 0
+Respawn = 0
+NROITEMS = 1
+Obj1 = 2 - 1
+
+[NPC2] 'Gallo
+Name = Gallo
+Desc=
+Head = 0
+Body = 5
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 10
+GiveGLD = 0
+MinHP = 15
+MaxHP = 15
+MaxHIT = 1
+MinHIT = 1
+DEF = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 5
+PoderEvasion = 5
+Domable = 30
+
+[NPC3] 'Cerdo
+Name = Cerdo
+Desc=
+Head = 0
+Body = 6
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 35
+MaxHP = 35
+MaxHIT = 2
+MinHIT = 1
+DEF = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 10
+PoderEvasion = 15
+Domable = 50
+SND2 = 4
+
+[NPC4] 'Vaca
+Name = Vaca
+Desc=
+Head = 0
+Body = 7
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 45
+MaxHP = 45
+MaxHIT = 3
+MinHIT = 1
+ImpactRate = 30
+DEF = 2
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 25
+PoderEvasion = 15
+Domable = 70
+SND2 = 8
+
+[NPC5] ' Sacerdote
+Name = Sacerdote
+Info=Sacerdote bueno
+NpcType = 1
+Desc= Díos te bendiga de la maldad pura de Lord thek... si te asesinan vuelve yo te resusitare.
+Head = 3
+Body = 101
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+NROITEMS = 0
+
+[NPC6] ' Guardia
+Name=Guardia Imperial
+NpcType = 2
+Faccion = 1
+Desc= Dicen que el final se aproxima, mas nosotros mantendremos nuestras posiciones hasta las últimas consecuencias.
+Head = 0
+Body = 15
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 115
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+[NPC9] 'NPC
+Name = Granjero
+Desc=Tengo las mejores manzanas, de mi cosecha personal.
+Info=Comida Mapa 7
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 1 - 100
+Obj2 = 27 - 100
+Obj3 = 158 - 100
+BackUp = 1
+Domable = 0
+
+[NPC10] 'NPC
+Name = Bardo
+Desc= El viento sopla fuerte/trae noticias de un triste final/Lord Azhimur el grande ha despertado/está esparciendo su maldad.
+Head = 0
+Body = 17
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+
+[NPC11] 'NPC
+Name = Aldeana
+Desc= Nuestro señor está reclutando gente para formar una poderosa armada. Por el bien de todos, por favor enlistate noble guerrero.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+
+'************************************* NPCS ULLATHORPE ***************************************
+'*********************************************************************************************
+
+[NPC7] 'NPC
+Name = Herrero
+Desc=Bienvenido a mi tienda, supongo que debes estar buscando armas... ¡¡entonces compra o vete de aquí!!
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 21
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 591 - 100
+Obj16 = 592 - 100
+Obj17 = 165 - 100
+Obj18 = 365 - 100
+Obj19 = 366 - 100
+Obj20 = 367 - 100
+Obj21 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Ullathorpe (armas)
+
+[NPC157]
+Name = Herrero
+Desc=Para aventurarte, guerrero, necesitaras cubrir tu cuerpo con gruesas armaduras.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 15
+Obj1 = 30 - 100
+Obj2 = 529 - 100
+Obj3 = 672 - 100
+Obj4 = 359 - 100
+Obj5 = 499 - 100
+Obj6 = 356 - 100
+Obj7 = 360 - 100
+Obj8 = 391 - 100
+Obj9 = 497 - 100
+Obj10 = 496 - 100
+Obj11 = 556 - 100
+Obj12 = 650 - 100
+Obj13 = 487 - 100
+Obj14 = 481 - 100
+Obj15 = 482 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Ullathorpe (armaduras/altos)
+
+[NPC167]
+Name = Herrero
+Desc=Los escudos y los cascos son de gran ayuda para todos los guerreros.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 17
+obj1 = 574 - 100
+Obj2 = 568 - 100
+Obj3 = 405 - 100
+Obj4 = 564 - 100
+Obj5 = 579 - 100
+Obj6 = 404 - 100
+Obj7 = 608 - 100
+Obj8 = 130 - 100
+Obj9 = 616 - 100
+Obj10 = 623 - 100
+Obj11 = 614 - 100
+Obj12 = 691 - 100
+Obj13 = 580 - 100
+Obj14 = 783 = 100
+Obj15 = 612 = 100
+Obj16 = 873 = 100
+Obj17 = 874 = 100
+BackUp = 1
+Domable = 0
+info=Herrero de Ullathorpe (cascos y escudos)
+
+[NPC8] 'NPC Comida: 24, 28, 29, 26, 25, 27.
+Name = Thorkis
+Desc=Muchos aldeanos han estado comprando comida en grandes cantidades para guardar en sus refugios, es por eso que los precios han aumentado.
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 6
+Inflacion = 4
+Obj1 = 24 - 100
+Obj2 = 28 - 100
+Obj3 = 29 - 100
+Obj4 = 26 - 100
+Obj5 = 25 - 100
+Obj6 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Ullathorpe
+
+[NPC12]
+Name = Sastre
+Desc= ¿Tienes frío? No te preocupes, vendo ropajes a precios asombrosamente bajos.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 18
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 504 - 100
+Obj5 = 505 - 100
+Obj6 = 506 - 100
+Obj7 = 490 - 100
+Obj8 = 486 - 100
+Obj9 = 511 - 100
+Obj10 = 382 - 100
+Obj11 = 488 - 100
+Obj12 = 512 - 100
+Obj13 = 656 - 100
+Obj14 = 657 - 100
+Obj15 = 694 - 100
+Obj16 = 707 - 100
+Obj17 = 510 - 100
+Obj18 = 697 - 100
+
+BackUp = 1
+Domable = 0
+info=Sastre de Ullathorpe
+
+[NPC168]
+Name = Sastre
+Desc= Las túnicas que vendo te protegeran.
+Head = 5
+Body = 176
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 11
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+Obj9 = 587 - 100
+Obj10 = 609 - 100
+Obj11 = 678 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Ullathorpe (túnicas gnomo/enano)
+
+[NPC169]
+Name = Sastre
+Desc= Las túnicas son las mayores defensas para los magos.
+Head = 171
+Body = 2
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 12
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+Obj11 = 208 - 100
+Obj12 = 626 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Ullathorpe (túnicas humano/elfo/elfo oscuro)
+
+[NPC13] 'NPC
+Name=Director general de las tropas de Ullathorpe.
+Desc= ¡Buen día jóven! Mi nombre es Thoren, y estoy a cargo de la dirección general de las tropas de Ullathorpe. Si deseas enlistarte, no dudes en visitar al Rey.
+Head = 0
+Body = 4
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Domable = 0
+
+[NPC14] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=Las pociones que vendo han sido hechas por los mejores alquimistas de estas tierras.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Habla = 200
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 710 - 100
+Obj2 = 711 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedora de pociones de Ullathorpe
+
+[NPC15] 'NPC Bebida: 43, 160, 161.
+Name = Tabernero
+Desc=¡Bienvenido a mi pequeña taberna!
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+NROITEMS = 4
+Obj1 = 43 - 100
+Obj2 = 160 - 100
+Obj3 = 161 - 100
+Obj4 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de Ullathorpe
+
+[NPC24] 'NPC
+Name = Banquero
+Desc=Te damos la bienvenida a nuestra cadena de bancos, la más importante sin lugar a dudas en estas tierras. Deposita tu dinero y pertenencias con total confianza en nuestra bóveda.
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+info=Banquero de Ullathorpe
+
+[NPC33] ' CARPINTERO Carpintería: 127, 198, 478, 479, 480.
+Name = Leñador
+Info=Carpintero Ulla
+Desc=Mi nombre es forcir y vendo arcos y flechas a muy buenos precios.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 14
+NROITEMS = 8
+Obj1 = 138 - 100
+Obj2 = 478 - 100
+Obj3 = 596 - 100
+Obj4 = 479 - 100
+obj5 = 600 - 100
+obj6 = 552 - 100
+obj7 = 474 - 100
+obj8 = 597 - 100
+BackUp = 1
+Domable = 0
+info=Carpintero de Ullathorpe
+
+[NPC34] ' Vendedor de propiedades-ULLATHORPE
+Name=Vendedor de propiedades.
+Desc=Hoy en día tener una propiedad en nuestra zona es un verdadero ícono de poder. Compra una y te aseguro tu nombré se oirá en nuestras tierras.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 9
+NROITEMS = 4
+Obj1 = 54 - 1
+Obj2 = 65 - 1
+Obj3 = 69 - 1
+Obj4 = 73 - 1
+InvReSpawn = 1
+BackUp = 1
+Domable = 0
+info = Deshabilitado
+
+[NPC46] 'NPC Hechizos: 202, 203, 363, 197.
+Name = Mago
+Info=Mago de Ulla
+Desc=Bienvenido a mi pequeño negocio, tengo algunos hechizos que te podrían interesar.
+Head = 1
+Body = 140
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 23
+Obj1 = 537 - 100
+Obj2 = 396 - 100
+Obj3 = 470 - 100
+Obj4 = 829 - 100
+Obj5 = 361 - 100
+Obj6 = 531 - 100
+Obj7 = 532 - 100
+Obj8 = 530 - 100
+Obj9 = 207 - 100
+Obj10 = 752 - 100
+Obj11 = 202 - 100
+Obj12 = 758 - 100
+Obj13 = 720 - 100
+Obj14 = 719 - 100
+Obj15 = 319 - 100
+Obj16 = 750 - 100
+Obj17 = 203 - 100
+Obj18 = 201 - 100
+Obj19 = 205 - 100
+Obj20 = 203 - 100
+Obj21 = 204 - 100
+Obj22 = 197 - 100
+Obj23 = 200 - 100
+Domable = 0
+info=Vendedor de hechizos de Ullathorpe
+
+[NPC200]
+Name = Mago
+Info=Mago de Ulla
+Desc=Tengo los sombreros y báculos que todo mago necesita.
+Head = 2
+Body = 140
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 4
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 573 - 100
+Obj4 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos de Ullathorpe
+
+[NPC105] ' Rey de Ullathorpe
+Name=Tanis, Rey de Ullathorpe
+NpcType = 5
+Faccion = 1
+Desc=Mi nombre es Tanis, Rey de Ullathorpe, la ciudad ubicada en el corazón del continente. Si deseas unirte al ejército que combatirá a Lord Azhimur, escribe /ENLISTAR.
+Head = 103
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+info=Rey de Ullathorpe
+
+'************************************* NPCS ULLATHORPE ***************************************
+'*********************************************************************************************
+
+
+'************************************* NPCS NIX ***************************************
+'*********************************************************************************************
+
+[NPC35] ' Vendedor de propiedades-NIX
+Name=Moraday.
+Desc=¡Hola, forastero! Tenemos a nuestra disposición varios hogares y la mansión más grande jamás hecha.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 9
+NROITEMS = 10
+Obj1 = 87 - 1
+Obj2 = 91 - 1
+Obj3 = 95 - 1
+Obj4 = 99 - 1
+Obj5 = 103 - 1
+Obj6 = 107 - 1
+Obj7 = 111 - 1
+Obj8 = 115 - 1
+Obj9 = 119 - 1
+Obj10 = 140 - 1
+InvReSpawn = 1
+BackUp = 1
+Domable = 0
+info = Deshabilitado
+
+[NPC36] 'NPC
+Name = Banquero
+Desc=¿Deseas depositar o extraer items?
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+Info=Banquero de Nix
+
+[NPC37] 'NPC Armas: 15, 2, 3, 579,
+Name = Herrero
+Desc=Nadie sabe con certeza qué pasará. Tan solo puedo recomendarte jóven, que lleves una de mis armas y te prepares.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Nix (armas)
+
+
+[NPC158]
+Name = Herrero
+Desc=Protege tu cuerpo si no quieres ser gravemente herido.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 1
+Obj1 = 1
+BackUp = 1
+Domable = 0
+info=Herrero de Nix (armaduras)
+
+[NPC166]
+Name = Herrero
+Desc=Mis escudos y cascos son los mejores del continente.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 1
+Obj1 = 40
+BackUp = 1
+Domable = 0
+info=Herrero de Nix (cascos y escudos)
+
+[NPC39] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527. Túnicas: 135, 381, 238.
+Name = Sastre
+Desc=A base de fuertes pieles hacemos las ropas más acojedoras que podrás encontrar.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 1
+Inflacion = 0
+Obj
+BackUp = 1
+Domable = 0
+info=Sastre de Nix
+
+[NPC170]
+Name = Sastre
+Desc=Abrigate, estas túnicas te serán de gran ayuda.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Nix (túnicas gnomo/enano)
+
+[NPC171]
+Name = Sastre
+Desc=Abrigate con las mejores túnicas que yo fabrico.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Nix (túnicas humano/elfo/elfo oscuro)
+
+[NPC40] 'NPC Comida: 1, 21, 22, 23, 158.
+Name = Ben
+Desc=Dicen que mis frutas son los manjares más delicisos de la zona ¡Pruébalos y compruebalo por tí mismo!
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 5
+Obj1 = 1 - 100
+Obj2 = 21 - 100
+Obj3 = 22 - 100
+Obj4 = 23 - 100
+Obj5 = 158 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Nix
+
+[NPC41] 'NPC Pescador: 543, 138.
+Name = Inigo
+Desc=¡Bienvenido al gremio de pescadores de Nix! Compra una caña y pesca en el muelle sin importar si lo haces por oficio o entretenimiento.
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 2
+Obj1 = 138 - 100
+Obj2 = 543 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Nix
+
+[NPC44] ' CARPINTERO Carpintería: 127, 198, 478, 601, 480.
+Name = Carpintero
+Desc=¡Hola muchacho!, bienvenido a mi humilde carpinteria.
+Head = 2
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 20
+NROITEMS = 5
+Obj1 = 127 - 100
+Obj2 = 198 - 100
+Obj3 = 478 - 100
+Obj4 = 596 - 100
+Obj5 = 479 - 100
+BackUp = 1
+info=Carpintero de Nix
+
+[NPC47] 'NPC Hechizos: 200, 201, , 197.
+Name = Mago
+Desc=Bienvenido a mi pequeño negocio de magia, tengo algunos hechizos que te podrian interesar.
+Head = 6
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 204 - 100
+Obj2 = 203 - 100
+Obj3 = 205 - 100
+Obj4 = 750 - 100
+Obj5 = 318 - 100
+Obj6 = 361 - 100
+Obj7 = 531 - 100
+Obj8 = 532 - 100
+Obj9 = 530 - 100
+Obj10 = 207 - 100
+Obj11 = 537 - 100
+Obj12 = 536 - 100
+Obj13 = 538 - 100
+Obj14 = 539 - 100
+Obj15 = 202 - 100
+Obj16 = 758 - 100
+Obj17 = 720 - 100
+Obj18 = 719 - 100
+Obj19 = 752 - 100
+Obj20 = 319 - 100
+Domable = 0
+info=Vendedor de hechizos de Nix
+
+[NPC201]
+Name = Mago
+Info=Mago de Nix
+Desc=Si eres mago, has venido al lugar correcto.
+Head = 2
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 5
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 705 - 100
+Obj4 = 573 - 100
+Obj5 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos Nix
+
+[NPC48] ' Minero Minería: 187, 398, 753
+Name = Minero
+Desc=Tengo los mejores metales de todas las Tierras del Fénix.
+Head = 2
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 23
+NROITEMS = 3
+Obj1 = 187 - 100
+Obj2 = 389 - 100
+Obj3 = 753 - 100
+BackUp = 1
+Domable = 0
+infio=Minero de Nix
+
+[NPC114] 'NPC Bebida: 43, 160
+Name = Tabernero
+Desc=¡Bienvenido a mi taberna viajero! Si bien no es muy grande, el sabor de las bebidas te hará volver pronto.
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+NROITEMS = 2
+Obj1 = 160 - 100
+Obj2 = 43 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebida de Nix
+
+[NPC115] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=Aunque no tengan el mejor sabor, estas pociones tendrán un efecto increíble en ti.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedora de pociones de Nix
+
+[NPC108] ' Rey de Nix
+Name=Hameck, Rey de Nix
+NpcType = 5
+Faccion = 1
+Desc=Bienvenido a Ciuark, la ciudad pesquera de este reino. Yo soy el Rey, Hameck. Si quieres unirte a la Alianza del Nabrían para luchar contra Lord thek, escribe /ENLISTAR.
+Head = 2
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+info=Rey de Nix
+
+[NPC139] 'NPC Alquimia: 698, 696 'FUERA DE USO
+Name = Alquimista
+Desc=
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 2
+TipoItems = 11
+Inflacion = 0
+Obj1 = 698 - 100
+Obj2 = 696 - 100
+BackUp = 1
+Domable = 0
+info=Alquimista de Nix
+
+'************************************* NPCS NIX **********************************************
+'*********************************************************************************************
+
+[NPC42] 'NPC
+Name = Antogne
+Info=Comida ND
+Desc=¡Hola aventurero! tengo todo tipo de frutas.
+Head = 4
+Body = 3
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 10
+Inflacion = 5
+Obj1 = 1 - 100
+Obj2 = 21 - 100
+Obj3 = 22 - 100
+Obj4 = 23 - 100
+Obj5 = 24 - 100
+Obj6 = 25 - 100
+Obj7 = 26 - 100
+Obj8 = 27 - 100
+Obj9 = 28 - 100
+Obj10 = 29 - 100
+BackUp = 1
+Domable = 0
+
+[NPC43] 'NPC
+Name = Sorks
+Info=Bebida ND
+Desc=¿Estas sediento?
+Head = 0
+Body = 33
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 2
+Obj1 = 42 - 100
+Obj2 = 43 - 100
+BackUp = 1
+Domable = 0
+
+[NPC45] 'NPC
+Name = Espiritu
+Desc=¡Huye de aqui mientras puedas!
+Head = 500
+Body = 8
+Heading = 3
+Movement = 2
+Attackable = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+Domable = 0
+
+[NPC49] ' Guardia
+Name=Guardia Imperial
+Info=Movimiento random
+NpcType = 2
+Faccion = 1
+Desc=Dare carcel a todos los criminales.
+Head = 0
+Body = 15
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 150
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+GolpeExacto = 1
+Domable = 0
+'************************************* NPCS ISLA PIRATA **************************************
+'*********************************************************************************************
+[NPC145] 'NPC Bebida: 43, 160, 161, 42.
+Name=Vendedor pirata de bebidas.
+Desc=¡Hola! Bienvenido a esta fabulosa taberna pirata. Puede elegir algo para beber y comer.
+Head = 301
+Body = 221
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 8
+Obj1 = 42 - 100
+Obj2 = 43 - 100
+Obj3 = 160 - 100
+Obj4 = 161 - 100
+Obj5 = 139 - 100
+Obj6 = 544 - 100
+Obj7 = 545 - 100
+Obj8 = 546 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas pirata
+
+[NPC146] 'NPC
+Name=Pirata banquero.
+Desc=Hola! Los piratas también necesitamos bancos, Disfrutalo!
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+Info=Banquero pirata
+
+
+[NPC147] ' Sacerdote
+Name=Pirata sacerdote.
+Info=Sacerdote pirata
+NpcType = 1
+Desc= Que Dios te bendiga y te libre de la maldad de Lord Azhimur, ahora largate!!!
+Info=Sacerdote bueno
+Head = 370
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+NROITEMS = 3
+Obj1 = 1 - 7
+Obj2 = 3 - 1
+Obj3 = 2 - 1
+
+[NPC207] ' Pirata raices
+Name=Pirata raices
+Info=Pirata raices
+NpcType = 1
+Desc=Me paso el día cortando raíces para el negocio de pociones.
+Info=Sacerdote bueno
+Head = 370
+Body = 221
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Hostile = 0
+
+[NPC148] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name=Pirata hechizera
+Desc=Esta isla fue descubierta hace poco y adoptada por algunos navegantes de la zona como su refugio antes de cada viaje.
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedora de pociones de la isla pirata.
+
+
+
+
+'************************************* NPCS BANDERBILL ***************************************
+'*********************************************************************************************
+[NPC50] 'NPC Bebida: 43, 160, 161, 42.
+Name=Bebida Bander
+Desc=¡Hola! Bienvenido al "Mesón Hostigado", ¿Que deseas beber?
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 4
+Obj1 = 43 - 100
+Obj2 = 42 - 100
+Obj3 = 160 - 100
+Obj4 = 161 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de bander
+
+[NPC51] 'NPC Hechizos: 207, 208, 318, 537, 538, 536, 206, 530, 361, 531, 532.
+Name = Mago
+Desc=Bienvenido a mi pequeño negocio de magia, tengo algunos hechizos que te podrían interesar.
+Head = 6
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 6
+Obj1 = 318 - 100
+Obj2 = 361 - 100
+Obj3 = 530 - 100
+Obj4 = 531 - 100
+Obj5 = 532 - 100
+Obj6 = 537 - 100
+Domable = 0
+info=Vendedor de hechizos de Banderbille
+
+[NPC202]
+Name = Mago
+Info=Mago de Banderbille
+Desc=Aquí encontrarás los gorros y báculos que necesitas.
+Head = 2
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 5
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 705 - 100
+Obj4 = 573 - 100
+Obj5 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos Banderbille
+
+[NPC52] ' FUERA DE USO
+Name = Rantarisk
+Desc=¡Hola, forastero! vendemos las mejores propiedades de Banderbill.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 9
+NROITEMS = 18
+Obj1 = 266 - 1
+Obj2 = 270 - 1
+Obj3 = 274 - 1
+Obj4 = 278 - 1
+Obj5 = 282 - 1
+Obj6 = 286 - 1
+Obj7 = 290 - 1
+Obj8 = 294 - 1
+Obj9 = 298 - 1
+Obj10 = 323 - 1
+Obj11 = 327 - 1
+Obj12 = 331 - 1
+Obj13 = 335 - 1
+Obj14 = 339 - 1
+Obj15 = 343 - 1
+Obj16 = 347 - 1
+Obj17 = 351 - 1
+Obj18 = 355 - 1
+InvReSpawn = 1
+BackUp = 1
+Domable = 0
+info = Deshabilitado
+
+[NPC53] 'NPC Comida: 26, 25, 27.
+Name = Roksar
+Desc=Dispongo de todo tipo de provisiones.
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 26 - 100
+Obj2 = 27 - 100
+Obj3 = 25 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Banderbille
+
+[NPC54] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550. T: 135, 381, 238, 675.
+Name = Sastre
+Desc=¡Hola forastero! Puedes obtener aquí las mejores ropas de la zona.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 28
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 240 - 100
+Obj5 = 527 - 100
+Obj6 = 515 - 100
+Obj7 = 504 - 100
+Obj8 = 505 - 100
+Obj9 = 506 - 100
+Obj10 = 490 - 100
+Obj11 = 486 - 100
+Obj12 = 511 - 100
+Obj13 = 382 - 100
+Obj14 = 488 - 100
+Obj15 = 512 - 100
+Obj16 = 656 - 100
+Obj17 = 657 - 100
+Obj18 = 694 - 100
+Obj19 = 707 - 100
+Obj20 = 510 - 100
+Obj21 = 513 - 100
+Obj22 = 697 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Banderbille
+
+[NPC172]
+Name = Sastre
+Desc=Cubre tu cuerpo con las túnicas mas resistentes del continente.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Banderbille (túnicas gnomo/enano)
+
+[NPC173]
+Name = Sastre
+Desc=Camúflate y abrigate con mis túnicas.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Banderbille (túnicas humano/elfo/elfo oscuro)
+
+
+[NPC55] 'NPC Armas: 15, 2, 3, 579, 580, 581, 399, 126, 705.
+Name = Herrero
+Desc=No importa que esta sea la ciudad más segura del continente. Siempre podrías necesitar armas cuando salgas de ella. Compra una!
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Banderbill (armas)
+
+[NPC56]
+Name = Herrero
+Desc=Una armadura resistente, sin duda, te ayudará.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 672 - 100
+Obj2 = 359 - 100
+Obj3 = 499 - 100
+Obj4 = 671 - 100
+Obj5 = 356 - 100
+Obj6 = 360 - 100
+Obj7 = 391 - 100
+Obj8 = 243 - 100
+Obj9 = 497 - 100
+Obj10 = 500 - 100
+Obj11 = 496 - 100
+Obj12 = 693 - 100
+Obj13 = 495 - 100
+Obj14 = 650 - 100
+Obj15 = 487 - 100
+Obj16 = 667 - 100
+Obj17 = 485 - 100
+Obj18 = 481 - 100
+Obj19 = 482 - 100
+Obj20 = 483 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Banderbill (armaduras)
+
+[NPC165]
+Name = Herrero
+Desc=Cubrete con mis escudos y mis cascos, pueden salvarte la vida.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 404 - 100
+Obj2 = 608 - 100
+Obj3 = 130 - 100
+Obj4 = 616 - 100
+Obj5 = 623 - 100
+Obj6 = 568 - 100
+Obj7 = 567 - 100
+Obj8 = 405 - 100
+Obj9 = 564 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Banderbill (cascos y escudos)
+
+[NPC57] 'NPC
+Name = Banquero
+Desc=Hola, bienvenido a la cadena de finanzas Goliath. Somos la mas grande cadena de finanzas en Argentum, contamos con bancos en todas las ciudades.
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+Info=Banquero de Banderbille
+
+[NPC58] 'NPC Pescador: 543, 138.
+Name = Pescador
+Desc=¡Bienvenido al gremio de pescadores!
+Head = 101
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 2
+Obj1 = 138 - 100
+Obj2 = 543 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Banderbille
+
+[NPC59] ' CARPINTERO Carpintería: 127, 198, 478, 479, 596, 601, 480.
+Name = Leñador
+Desc=¡Hola muchacho!, soy uno de los mejores carpinteros de la zona.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 14
+NROITEMS = 5
+Obj1 = 127 - 100
+Obj2 = 198 - 100
+Obj3 = 478 - 100
+Obj4 = 596 - 100
+Obj5 = 479 - 100
+BackUp = 1
+Domable = 0
+info=Carpintero de Banderbille
+
+[NPC60] ' Entrenador de Banderbille
+Name = O 'Riley de Banderbill
+NpcType = 3
+Desc=¡Hola amigo! Soy el maestro de armas de la milicia de Banderbill, si deseas que traiga una criatura solo debes pedírmelo.
+Head = 6
+Body = 57
+Heading = 3
+Movement = 1
+NroCriaturas = 5
+CI1 = 641
+CI2 = 545
+CI3 = 642
+CI4 = 643
+CI5 = 638
+CN1 = Murciélago
+CN2 = Lobo
+CN3 = Cobra
+CN4 = Escorpion
+CN5 = Goblin
+Domable = 0
+info=Entrenador de Banderbille
+
+[NPC113] ' Minero Minería: 187, 398, 753.
+Name = Minero
+Desc=Si quieres ser un minero, mi negocio te será de ayuda.
+Head = 2
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 23
+NROITEMS = 3
+Obj1 = 187 - 100
+Obj2 = 753 - 100
+Obj3 = 389 - 100
+BackUp = 1
+Domable = 0
+info=Minero de Bander
+
+[NPC116] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=Las pociones que vendo han sido hechas por los mejores alquimistas de estas tierras.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de pociones
+
+[NPC107] ' Rey de Banderbill
+Name=Theoden, Rey de Banderbill
+NpcType = 5
+Faccion = 1
+Desc=Te encuentras en la ciudad más poderosa de estas tierras, Banderbill. Si quieres unirte a la alianza que luchará contra Lord Azhimur, escribe /ENLISTAR.
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+
+'************************************* NPCS BANDERBILL ***************************************
+'*********************************************************************************************
+
+
+'************************************* NPCS LINDOS *******************************************
+'*********************************************************************************************
+
+[NPC61]
+Name = Mago
+Desc=Puedo enseñarte hechizos que posiblemente te sean de mucha utilidad.
+Head = 6
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 10
+Obj1 = 363 - 100
+Obj2 = 364 - 100
+Obj3 = 397 - 100
+Obj4 = 396 - 100
+Obj5 = 470 - 100
+Obj6 = 471 - 100
+Obj7 = 394 - 100
+Obj8 = 395 - 100
+Obj9 = 542 - 100
+Obj10 = 751 = 100
+Domable = 0
+info=Vendedor de hechizos de Lindos
+
+[NPC203]
+Name = Mago
+Info=Mago de Lindos
+Desc=Usa el equipamiento que te ofrezco si quieres sobrevivir.
+Head = 2
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 5
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 705 - 100
+Obj4 = 573 - 100
+Obj5 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos Lidos
+
+[NPC62] ' FUERA DE USO
+Name = Guldorf
+Desc=¡Hola, forastero! vendemos las mejores propiedades.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 9
+NROITEMS = 7
+Obj1 = 420 - 1
+Obj2 = 424 - 1
+Obj3 = 428 - 1
+Obj4 = 432 - 1
+Obj5 = 436 - 1
+Obj6 = 440 - 1
+Obj7 = 444 - 1
+InvReSpawn = 1
+BackUp = 1
+Domable = 0
+info = Deshabilitado
+
+[NPC68] 'NPC Pescador: 543, 138.
+Name = Pescador
+Desc=¡Hola forastero, bienvenido a Lindos!
+Head = 102
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 10
+Obj1 = 138 - 100
+Obj2 = 543 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Lindos
+
+[NPC70] 'NPC 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550, 508. 135, 381, 238, 675, 357.
+Name = Sastre
+Desc=¡Hola forastero! confeccionamos las mejores ropas de la zona
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 28
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 240 - 100
+Obj5 = 527 - 100
+Obj6 = 515 - 100
+Obj7 = 504 - 100
+Obj8 = 505 - 100
+Obj9 = 506 - 100
+Obj10 = 490 - 100
+Obj11 = 486 - 100
+Obj12 = 511 - 100
+Obj13 = 382 - 100
+Obj14 = 488 - 100
+Obj15 = 512 - 100
+Obj16 = 656 - 100
+Obj17 = 657 - 100
+Obj18 = 694 - 100
+Obj19 = 707 - 100
+Obj20 = 510 - 100
+Obj21 = 513 - 100
+Obj22 = 697 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Lindos
+
+[NPC174]
+Name = Sastre
+Desc=Estas túnicas te defenderan, yo mísmo las confeccioné.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Lindos (túnicas gnomo/enano)
+
+[NPC175]
+Name = Sastre
+Desc=Cubre tu cuerpo con estas túnicas, muchos afirman que son las más resistentes.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Lindos (túnicas humano/elfo/elfo oscuro)
+
+[NPC71] 'NPC Armas: 15, 2, 3, 579, 580, 399, 126, 123.
+Name = Brotherson
+Desc=No es esta la ciudad más segura del continente. Sin duda te será de mucha utilidad un buen arma por si acaso...
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Lindos (armas)
+
+[NPC159]
+Name = Herrero
+Desc=Cubre tu cuerpo con fuertes armaduras si no quieres morir.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 672 - 100
+Obj2 = 359 - 100
+Obj3 = 499 - 100
+Obj4 = 671 - 100
+Obj5 = 356 - 100
+Obj6 = 360 - 100
+Obj7 = 391 - 100
+Obj8 = 243 - 100
+Obj9 = 497 - 100
+Obj10 = 500 - 100
+Obj11 = 496 - 100
+Obj12 = 693 - 100
+Obj13 = 495 - 100
+Obj14 = 650 - 100
+Obj15 = 487 - 100
+Obj16 = 667 - 100
+Obj17 = 485 - 100
+Obj18 = 481 - 100
+Obj19 = 482 - 100
+Obj20 = 483 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Lindos (armaduras)
+
+[NPC164]
+Name = Herrero
+Desc=Cubrete con mis escudos y mis cascos, pueden salvarte la vida.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 404 - 100
+Obj2 = 608 - 100
+Obj3 = 130 - 100
+Obj4 = 616 - 100
+Obj5 = 623 - 100
+Obj6 = 568 - 100
+Obj7 = 567 - 100
+Obj8 = 405 - 100
+Obj9 = 564 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Lindos (cascos y escudos)
+
+[NPC124] 'NPC Bebida: 43, 160, 161, 42.
+Name=Bebida Lindos
+Desc=¿Quieres bebida? Puedo darte lo que desees, siempre y cuando puedas pagarla.
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 4
+Obj1 = 42 - 100
+Obj2 = 43 - 100
+Obj3 = 160 - 100
+Obj4 = 161 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de Lindos
+
+[NPC69] 'NPC Comida: 26, 25, 27.
+Name = Argal
+Info=Comida Lindos
+Desc=En esta isla, nadie puede ofrecerte mejores manjares que yo.
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 25 - 100
+Obj2 = 26 - 100
+Obj3 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Lindos
+
+[NPC104] ' Rey de Lindos
+Name=Caramon, Rey de Lindos
+NpcType = 5
+Faccion = 1
+Desc=Soy Caramon, Rey de esta hermosa isla. Junto con los otros reyes de estas tierras, buscamos armar un ejército que destruya a Lord Azhimur. Si te interesa unirte, escribe /ENLISTAR.
+Head = 7
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+info=Rey de Lindos
+
+'************************************* NPCS LINDOS *******************************************
+'*********************************************************************************************
+
+
+
+'************************************* NPCS HILIDIAN *****************************************
+'*********************************************************************************************
+
+[NPC110] 'NPC Armas: 15, 2, 3, 579, 581, 399, 126, 401, 705.
+Name = Herrero
+Desc=Hilidian es una de las poblaciones más pacíficas de estas tierras, lo que no significa que no necesitemos defendernos con armas... Compra una!
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Hilidian (armas)
+
+[NPC111]
+Name = Herrero
+Desc=En estos momentos de guerra, si eres un luchador nada mejor que una buena armadura para tu protección.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 672 - 100
+Obj2 = 359 - 100
+Obj3 = 499 - 100
+Obj4 = 671 - 100
+Obj5 = 356 - 100
+Obj6 = 360 - 100
+Obj7 = 391 - 100
+Obj8 = 243 - 100
+Obj9 = 497 - 100
+Obj10 = 500 - 100
+Obj11 = 496 - 100
+Obj12 = 693 - 100
+Obj13 = 495 - 100
+Obj14 = 650 - 100
+Obj15 = 487 - 100
+Obj16 = 667 - 100
+Obj17 = 485 - 100
+Obj18 = 481 - 100
+Obj19 = 482 - 100
+Obj20 = 483 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Hilidian (armaduras)
+
+[NPC163]
+Name = Herrero
+Desc=Puedes necesitar cubrirte con escudos o cascos.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 404 - 100
+Obj2 = 608 - 100
+Obj3 = 130 - 100
+Obj4 = 616 - 100
+Obj5 = 623 - 100
+Obj6 = 568 - 100
+Obj7 = 567 - 100
+Obj8 = 405 - 100
+Obj9 = 564 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Hilidian (cascos y escudos)
+
+[NPC119] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550, 508.
+'Túnicas: 135, 381, 238, 675, 357,526, 525.
+Name=Sastre Hilidian
+Desc=Siempre es bueno andar bien vestido, y más con el frío que aquí hace.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 28
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 240 - 100
+Obj5 = 527 - 100
+Obj6 = 515 - 100
+Obj7 = 504 - 100
+Obj8 = 505 - 100
+Obj9 = 506 - 100
+Obj10 = 490 - 100
+Obj11 = 486 - 100
+Obj12 = 511 - 100
+Obj13 = 382 - 100
+Obj14 = 488 - 100
+Obj15 = 512 - 100
+Obj16 = 656 - 100
+Obj17 = 657 - 100
+Obj18 = 694 - 100
+Obj19 = 707 - 100
+Obj20 = 510 - 100
+Obj21 = 513 - 100
+Obj22 = 697 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Hilidian
+
+[NPC176]
+Name = Sastre
+Desc=Con las bajas temperaturas de estas zonas, necesitarás una de mis túnicas.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Hilidian (túnicas gnomo/enano)
+
+[NPC177]
+Name = Sastre
+Desc=Abrigate, por estas zonas, el frío es abundante.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Hilidian (túnicas humano/elfo/elfo oscuro)
+
+[NPC130] 'NPC Bebida: 26, 25, 27, 43, 160, 161.
+Name=Bebida Hilidian
+Desc=¡Hola! Bienvenido a esta hermosa taberna. ¿Deseas beber algo mientras cuentas tus historias?
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 7
+Obj1 = 26 - 100
+Obj2 = 25 - 100
+Obj3 = 27 - 100
+Obj4 = 43 - 100
+Obj6 = 160 - 100
+Obj7 = 161 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de Hilidian
+
+[NPC131] 'NPC Hechizos: 716, 539, 717, 718, 719, 721.
+Name = Mago
+Desc=Los hechizos que pueden encontrar aquí no pueden ser aprendidos por cualquiera. Será mejor que averigües antes de comprarlos.
+Head = 6
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 536 - 100
+Obj2 = 538 - 100
+Obj3 = 319 - 100
+Obj4 = 719 - 100
+Obj5 = 752 - 100
+Obj6 = 202 - 100
+Obj7 = 758 - 100
+Obj8 = 539 - 100
+Obj9 = 720 - 100
+Domable = 0
+info=Vendedor de hechizos de Hilidian
+
+[NPC204]
+Name = Mago
+Info=Mago de hilidian
+Desc=Si buscabas sombreros o báculos, puedo ofrecerte algo.
+Head = 2
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 5
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 705 - 100
+Obj4 = 573 - 100
+Obj5 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos hilidian
+
+[NPC132] 'NPC Pescador: 543, 138.
+Name = Pescador
+Desc=¡Hola forastero, bienvenido a nuestro pueblo nevado!
+Head = 101
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 10
+Obj1 = 543 - 100
+Obj2 = 138 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Hilidian
+
+[NPC133] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=De seguro mis pociones te serán de utilidad ya sea para entrenar o enfrentar al enemigo.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de pociones
+
+[NPC134] 'NPC
+Name = Argal
+Info=Comida Hilidian
+Desc=¡Hola buen amigo! ¿Puedo ofrecerte comida?
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 24 - 100
+Obj2 = 26 - 100
+Obj3 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Hilidian
+
+[NPC135] 'NPC
+Name = Banquero
+Desc=Hola, también aquí puedes encontrar uno de nuestros bancos. No los desaproveches!
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+info=Banquero de Hilidian
+
+[NPC72] 'Rey de Hilidian
+Name=Sturm, Rey de Hilidian
+NpcType = 5
+Faccion = 1
+Desc=Yo soy Sturm, Rey de esta hermosa ciudad nevada. Si quieres sumarte a las tropas del Flamius que combatirán al ejército de Lord Azhimur, escribe /ENLISTAR.
+Head = 102
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+info=Rey de Hilidian
+
+'************************************* NPCS HILIDIAN *****************************************
+'*********************************************************************************************
+
+
+
+'************************************* NPCS ESPERANZA ****************************************
+'*********************************************************************************************
+
+[NPC64] 'NPC Pescador: 543, 138.
+Name = Pescador
+Desc=¡Hola forastero, bienvenido a Nueva Esperanza!
+Head = 101
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 2
+Obj1 = 138 - 100
+Obj2 = 543 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Esperanza
+
+[NPC125] 'NPC Armas: 15, 2, 3, 579, 580, 581, 399, 126, 705.
+Name = Brotherson
+Desc=Estas tierras iban a servir de refugio para los habitantes del continente, mientras Shiniban se expandía. Una vez derrotado, han sido abandonadas y son realmente poco seguras!
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Esperanza (armas)
+
+[NPC126] 'NPC Pociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=Las pociones aquí son caras, ya que el riesgo a robos y saqueos es constante por aquí.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de pociones de Esperanza
+
+[NPC99] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550, 508. Túnicas: 135, 381, 238, 675, 357,526, 525.
+Name=Sastre Esperanza
+Desc=¿Necesitas una vestimenta? Elige entre nuestra gran variedad!
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 28
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 240 - 100
+Obj5 = 527 - 100
+Obj6 = 515 - 100
+Obj7 = 504 - 100
+Obj8 = 505 - 100
+Obj9 = 506 - 100
+Obj10 = 490 - 100
+Obj11 = 486 - 100
+Obj12 = 511 - 100
+Obj13 = 382 - 100
+Obj14 = 488 - 100
+Obj15 = 512 - 100
+Obj16 = 656 - 100
+Obj17 = 657 - 100
+Obj18 = 694 - 100
+Obj19 = 707 - 100
+Obj20 = 510 - 100
+Obj21 = 513 - 100
+Obj22 = 697 - 100
+BackUp = 1
+Domable = 0
+info=Satre de Esperanza
+
+[NPC178]
+Name = Sastre
+Desc=Si quieres salir con vida de estas islas, deberás vestir una de mis túnicas.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Esperanza (túnicas gnomo/enano)
+
+[NPC179]
+Name = Sastre
+Desc=Usa una de mis túnicas, te protegerán.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Esperanza (túnicas humano/elfo/elfo oscuro)
+
+[NPC160]
+Name = Herrero
+Desc=Tu cuerpo será lastimado si no lo cubres con armaduras.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 672 - 100
+Obj2 = 359 - 100
+Obj3 = 499 - 100
+Obj4 = 671 - 100
+Obj5 = 356 - 100
+Obj6 = 360 - 100
+Obj7 = 391 - 100
+Obj8 = 243 - 100
+Obj9 = 497 - 100
+Obj10 = 500 - 100
+Obj11 = 496 - 100
+Obj12 = 693 - 100
+Obj13 = 495 - 100
+Obj14 = 650 - 100
+Obj15 = 487 - 100
+Obj16 = 667 - 100
+Obj17 = 485 - 100
+Obj18 = 481 - 100
+Obj19 = 482 - 100
+Obj20 = 483 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Esperanza (armaduras)
+
+[NPC162]
+Name = Herrero
+Desc=Los cascos y escudos son fundamentales a la hora de la batalla.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 404 - 100
+Obj2 = 608 - 100
+Obj3 = 130 - 100
+Obj4 = 616 - 100
+Obj5 = 623 - 100
+Obj6 = 568 - 100
+Obj7 = 567 - 100
+Obj8 = 405 - 100
+Obj9 = 564 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Esperanza (cascos y escudos)
+
+[NPC128] ' CARPINTERO Carpintería: 127, 198, 478, 479, 597, 480.
+Name = Leñador
+Desc=¡Hola muchacho! Si quieres madera no tienes más que pedirme.
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+TipoItems = 14
+NROITEMS = 5
+Obj1 = 127 - 100
+Obj2 = 198 - 100
+Obj3 = 478 - 100
+Obj4 = 596 - 100
+Obj5 = 479 - 100
+BackUp = 1
+Domable = 0
+info=Carpintero de Nueva Esperanza
+
+[NPC129] 'NPC
+Name = Banquero
+Desc=Por el peligro que representa esta ciudad, todo lo depositado es llevado rápidamente al continente. Por lo que tus pertenencias están a salvo!
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+info=Banquero de Esperanza
+
+[NPC136] 'NPC Comida: 26, 25, 27.
+Name = Argal
+Desc=¡Hola buen amigo! Cuento con las mejores frutas de esta isla. Por algunas monedas de oro podra obtener muy buenas provisiones.
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+Inflacion = 5
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 25 - 100
+Obj2 = 26 - 100
+Obj3 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Esperanza
+
+[NPC137] 'NPC Bebida: 43, 160, 161, 42.
+Name=Bebida Esperanza
+Desc=Aunque aquí los precios son altos, no encontrarás mejores en ningún lugar cercano.
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 4
+Obj1 = 42 - 100
+Obj2 = 43 - 100
+Obj3 = 160 - 100
+Obj4 = 161 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de Esperanza
+
+'************************************* NPCS EZPERANZA ****************************************
+'*********************************************************************************************
+
+
+
+'************************************* NPCS ARGHAL *******************************************
+'*********************************************************************************************
+
+[NPC12] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550. Túnicas: 135, 381, 238, 675.
+Name = Sastre
+Desc= ¿Tienes frío? No te preocupes, vendo ropajes a precios asombrosamente bajos.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 14
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 504 - 100
+Obj5 = 505 - 100
+Obj6 = 506 - 100
+Obj7 = 490 - 100
+Obj8 = 486 - 100
+Obj9 = 511 - 100
+Obj10 = 382 - 100
+Obj11 = 488 - 100
+Obj12 = 512 - 100
+Obj13 = 656 - 100
+Obj14 = 694 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Arghal
+
+[NPC180]
+Name = Sastre
+Desc=Tengo las túnicas que necesitas.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 8
+Inflacion = 0
+Obj1 = 524 - 100
+Obj2 = 639 - 100
+Obj3 = 675 - 100
+Obj4 = 588 - 100
+Obj5 = 525 - 100
+Obj6 = 526 - 100
+Obj7 = 619 - 100
+Obj8 = 520 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Esperanza (túnicas gnomo/enano)
+
+[NPC181]
+Name = Sastre
+Desc=Si estás buscando túnicas, tengo lo que quieres.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 10
+Inflacion = 0
+Obj1 = 239 - 100
+Obj2 = 381 - 100
+Obj3 = 196 - 100
+Obj4 = 238 - 100
+Obj5 = 135 - 100
+Obj6 = 357 - 100
+Obj7 = 503 - 100
+Obj8 = 519 - 100
+Obj9 = 491 - 100
+Obj10 = 772 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Arghal (túnicas humano/elfo/elfo oscuro)
+
+[NPC206] 'NPC Hechizos:
+Name = Mago
+Desc=Tengo algunos hechizos que te podrían ser útiles.
+Head = 6
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 6
+Obj1 = 318 - 100
+Obj2 = 361 - 100
+Obj3 = 530 - 100
+Obj4 = 531 - 100
+Obj5 = 532 - 100
+Obj6 = 537 - 100
+Domable = 0
+info=Vendedor de hechizos de Arghal
+
+[NPC205]
+Name = Mago
+Info=Mago de Arghal
+Desc=Te enseñaré los gorros y báculos que vendo.
+Head = 2
+Body = 50
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 24
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 5
+Obj1 = 726 - 100
+Obj2 = 728 - 100
+Obj3 = 705 - 100
+Obj4 = 573 - 100
+Obj5 = 572 - 100
+Domable = 0
+info=Vendedor de Gorros/Báculos Arghal
+
+[NPC117] Armas: 15, 2, 3, 579, 580, 581, 399, 125, 705.
+Name = Herrero
+Desc=Bienvenido a mi tienda, supongo que debes estar buscando armas... ¡¡entonces compra o vete de aquí!!
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 22
+Obj1 = 15 - 100
+Obj2 = 164 - 100
+Obj3 = 9 - 100
+Obj4 = 3 - 100
+Obj5 = 126 - 100
+Obj6 = 401 - 100
+Obj7 = 123 - 100
+Obj8 = 125 - 100
+Obj9 = 159 - 100
+Obj10 = 759 - 100
+Obj11 = 399 - 100
+Obj12 = 124 - 100
+Obj13 = 129 - 100
+Obj14 = 403 - 100
+Obj15 = 589 - 100
+Obj16 = 591 - 100
+Obj17 = 592 - 100
+Obj18 = 165 - 100
+Obj19 = 365 - 100
+Obj20 = 366 - 100
+Obj21 = 367 - 100
+Obj22 = 576 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Arghal (armas)
+
+[NPC118] 'NPC Comida: 26, 25, 27.
+Name = Argal
+Desc=¡Hola buen amigo! El temor a que Arghal sea de nuevo destruida hace que muchos compren mucha comida para sus refugios!
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 3
+Inflacion = 0
+Obj1 = 25 - 100
+Obj2 = 26 - 100
+Obj3 = 27 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de comida de Arghal
+
+[NPC120] 'NPC Armaduras: 529, 30, 659, 672, 671, 499, 359.Escudos: 404, 608.Cascos: 568, 566.
+Name = Herrero
+Desc=Tan solo las armaduras que yo vendo te protegerán contra las fuerzas del mal.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 20
+Obj1 = 672 - 100
+Obj2 = 359 - 100
+Obj3 = 499 - 100
+Obj4 = 671 - 100
+Obj5 = 356 - 100
+Obj6 = 360 - 100
+Obj7 = 391 - 100
+Obj8 = 243 - 100
+Obj9 = 497 - 100
+Obj10 = 500 - 100
+Obj11 = 496 - 100
+Obj12 = 693 - 100
+Obj13 = 495 - 100
+Obj14 = 650 - 100
+Obj15 = 487 - 100
+Obj16 = 667 - 100
+Obj17 = 485 - 100
+Obj18 = 481 - 100
+Obj19 = 482 - 100
+Obj20 = 483 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Arghal (armaduras)
+
+[NPC161]
+Name = Herrero
+Desc=Las piezas que yo vendo, pueden salvarte la vida.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 9
+Obj1 = 404 - 100
+Obj2 = 608 - 100
+Obj3 = 130 - 100
+Obj4 = 616 - 100
+Obj5 = 623 - 100
+Obj6 = 568 - 100
+Obj7 = 567 - 100
+Obj8 = 405 - 100
+Obj9 = 564 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Arghal (cascos y escudos)
+
+[NPC121] 'NPCPociones: 38, 709, 37, 708, 36, 39, 166.
+Name = Hechizera
+Desc=Puedes aumentar tu fuerza, agilidad, vida o poderío mágico con las pociones que te ofrezco.
+Head = 0
+Body = 34
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+NROITEMS = 5
+TipoItems = 11
+Inflacion = 0
+Obj1 = 708 - 100
+Obj2 = 709 - 100
+Obj3 = 36 - 100
+Obj4 = 39 - 100
+Obj5 = 166 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de pociones de Arghal
+
+[NPC122] 'NPC Pescador: 543, 138.
+Name = Pescador
+Desc=¡Hola forastero, bienvenido a Arghal!
+Head = 101
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 1
+NROITEMS = 2
+Obj1 = 138 - 100
+Obj2 = 543 - 100
+BackUp = 1
+Domable = 0
+info=Pescador de Arghal
+
+[NPC123] 'NPC
+Name = Banquero
+Desc=Hola, bienvenido a la cadena de finanzas Goliath. Somos la mas grande cadena de finanzas en estas tierras, con bancos en todas las ciudades.
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+info=Banquero de Arghal
+
+[NPC138] 'NPC Bebida: 43, 160, 161, 42.
+Name=Bebida Arghal
+Desc=Si tienes sed, nada mejor que una de nuestras bebidas.
+Head = 0
+Body = 33
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+TipoItems = 13
+Inflacion = 5
+NROITEMS = 4
+Obj1 = 42 - 100
+Obj2 = 43 - 100
+Obj3 = 160 - 100
+Obj4 = 161 - 100
+BackUp = 1
+Domable = 0
+info=Vendedor de bebidas de Arghal
+
+[NPC106] ' Rey de Arghal
+Name=Lord Azhimur, Rey de Arghal
+NpcType = 5
+Faccion = 2
+Desc=Arghal fue reconstruida en el desierto luego de que una gran guerra la destruyera por completo. Yo soy Lord Azhimur, su Rey, y si quieres evitar que el pasado se repita, escribe /ENLISTAR y únete a nosotros.
+Head = 203
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+info=Rey de Arghal
+
+'************************************* NPCS ARGHAL *******************************************
+'*********************************************************************************************
+
+[NPC63] ' Sacerdote
+Name = Sacerdote
+NpcType = 1
+Desc=Hola hijo mio, soy el sacerdote de este pueblo. Si quieres ser resucitado solo dímelo.
+Head = 3
+Body = 49
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+NROITEMS = 3
+Obj1 = 1 - 7
+Obj2 = 3 - 1
+Obj3 = 2 - 1
+Domable = 0
+
+[NPC65] 'Gallo
+Name = Gallo
+info = INVULNERABLE
+Desc=
+Head = 0
+Body = 5
+Heading = 3
+Movement = 2
+Comercia = 0
+Hostile = 0
+GiveEXP = 10
+GiveGLD = 0
+MinHP = 15
+MaxHP = 15
+MaxHIT = 1
+MinHIT = 1
+DEF = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 5
+PoderEvasion = 5
+Domable = 0
+
+
+[NPC66] 'Cerdo
+Name = Cerdo
+info = INVULNERABLE
+Desc=
+Head = 0
+Body = 6
+Heading = 3
+Movement = 2
+Comercia = 0
+Hostile = 0
+GiveEXP = 15
+GiveGLD = 0
+MinHP = 35
+MaxHP = 35
+MaxHIT = 2
+MinHIT = 1
+DEF = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 5
+PoderEvasion = 5
+Domable = 0
+
+
+[NPC67] 'Vaca
+Name = Vaca
+info = INVULNERABLE
+Desc=
+Head = 0
+Body = 7
+Heading = 3
+Movement = 2
+Comercia = 0
+Hostile = 0
+GiveEXP = 10
+GiveGLD = 0
+MinHP = 45
+MaxHP = 45
+MaxHIT = 3
+MinHIT = 1
+DEF = 2
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 5
+PoderEvasion = 5
+Domable = 0
+
+[NPC73] ' Guardia
+Name=Guardia Imperial
+NpcType = 2
+Faccion = 1
+Desc=Dare carcel a todos los criminales.
+'Head=0
+Head = 101
+Body = 62
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 150
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+[NPC74] 'Aguila
+Name = Aguila
+Head = 0
+Body = 59
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 75
+GiveGLD = 0
+MinHP = 40
+MaxHP = 40
+MaxHIT = 15
+MinHIT = 4
+PoderAtaque = 25
+PoderEvasion = 160
+Domable = 87
+AguaValida = 1
+
+[NPC75] 'Cuervo
+Name = Cuervo
+Head = 0
+Body = 68
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 55
+GiveGLD = 0
+MinHP = 30
+MaxHP = 30
+MaxHIT = 6
+MinHIT = 2
+PoderAtaque = 15
+PoderEvasion = 100
+Domable = 50
+AguaValida = 1
+
+[NPC76] 'Hormiga
+Name = Hormiga
+Head = 0
+Body = 70
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 5
+GiveGLD = 0
+MinHP = 5
+MaxHP = 5
+MaxHIT = 1
+MinHIT = 1
+PoderAtaque = 5
+PoderEvasion = 3
+Domable = 5
+
+[NPC77] 'Rata
+Name = Rata
+Head = 0
+Body = 71
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 5
+GiveGLD = 0
+MinHP = 15
+MaxHP = 15
+MaxHIT = 4
+MinHIT = 2
+PoderAtaque = 10
+PoderEvasion = 20
+Domable = 15
+Snd1 = 47
+SND2 = 47
+
+[NPC78] 'Oso pardo
+Name=Oso pardo
+Head = 0
+Body = 73
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 550
+GiveGLD = 0
+MinHP = 515
+MaxHP = 515
+MaxHIT = 100
+MinHIT = 65
+PoderAtaque = 700
+PoderEvasion = 45
+Domable = 300
+
+[NPC79] 'Tortuga
+Name=Tortuga gigante
+Head = 0
+Body = 74
+Heading = 3
+Movement = 2
+Hostile = 0
+Alineacion = 0
+GiveEXP = 350
+GiveGLD = 0
+MinHP = 315
+MaxHP = 315
+MaxHIT = 80
+MinHIT = 35
+PoderAtaque = 300
+PoderEvasion = 25
+Domable = 200
+
+[NPC80] 'NPC
+Name = Mercader
+Info=Vende Todo
+Desc=¡¡Hola buen amigo, compro y vendo todo tipo de mercancias!!
+Head = 2
+Body = 3
+Heading = 3
+Movement = 1
+Comercia = 1
+TipoItems = 1000
+BackUp = 1
+NROITEMS = 1
+Obj1 = 534 - 100
+
+[NPC81] ' Guardia
+Name = Sacerdote
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 4
+Body = 101
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 25
+Sp2 = 9
+
+[NPC82] ' Guardia
+Name = Sacerdote
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 5
+Body = 101
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 25
+Sp2 = 9
+
+
+[NPC83] ' Guardia
+Name = Druida
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 101
+Body = 56
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC84] ' Guardia
+Name = Druida
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 102
+Body = 56
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC85] ' Guardia
+Name = Druida
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 103
+Body = 56
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC86] ' Guardia
+Name = Mago
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 6
+Body = 130
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC87] ' Guardia
+Name=Mago imperial
+NpcType = 2
+Faccion = 1
+Desc=Ohhh hijo mio!! que la llama de la virtud arda en tu corazón!!!
+Head = 6
+Body = 128
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC88] 'NPC
+Name = Ely
+Head = 0
+Body = 143
+MinHP = 15000
+MaxHP = 15000
+Heading = 3
+Movement = 2
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+LanzaSpells = 1
+Sp1 = 5
+AguaValida = 1
+
+[NPC89] 'NPC
+Name=Fuego fatuo
+Head = 0
+Body = 144
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+GiveEXP = 6000
+GiveGLD = 1000
+MinHP = 15000
+MaxHP = 15000
+MaxHIT = 100
+MinHIT = 100
+PoderAtaque = 1000
+PoderEvasion = 500
+Domable = 0
+LanzaSpells = 1
+Sp1 = 23
+AguaValida = 1
+
+[NPC90] 'NPC
+Name = Morgolock 's soul
+Head = 0
+Body = 144
+Heading = 3
+Movement = 2
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+GiveEXP = 2000
+GiveGLD = 2000
+MinHP = 29550
+MaxHP = 29550
+MaxHIT = 100
+MinHIT = 100
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+AguaValida = 1
+
+[NPC91] 'Aguila
+Name=Gran Aguila
+Head = 0
+Body = 59
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 75
+GiveGLD = 0
+MinHP = 40
+MaxHP = 40
+MaxHIT = 15
+MinHIT = 4
+PoderAtaque = 25
+PoderEvasion = 160
+Domable = 87
+AguaValida = 1
+
+[NPC92] 'Elemental de agua
+Name=Elemental de agua
+Body=154
+Heading=3
+Movement=2
+MinHP=400
+MaxHP=400
+MaxHIT=205
+MinHIT=185
+PoderAtaque=180
+PoderEvasion=180
+Attackable=1
+
+[NPC93] 'Elemental de fuego
+Name=Elemental de fuego
+Body=153
+Heading=3
+Movement=2
+MinHP=400
+MaxHP=400
+Attackable=1
+MaxHIT=120
+MinHIT=100
+PoderAtaque=200
+PoderEvasion=200
+LanzaSpells=1
+Sp1=15
+
+[NPC94] 'Elemental de tierra
+Name=Elemental de tierra
+Body = 152
+Attackable = 1
+Heading = 3
+Movement = 2
+MinHP = 400
+MaxHP = 400
+MaxHIT = 220
+MinHIT = 250
+PoderAtaque = 200
+PoderEvasion = 200
+LanzaSpells = 1
+Sp1 = 24
+
+[NPC95] 'Jabalí
+Name = Jabalí
+Head = 0
+Body = 150
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 550
+GiveGLD = 0
+MinHP = 515
+MaxHP = 515
+MaxHIT = 100
+MinHIT = 65
+PoderAtaque = 700
+PoderEvasion = 45
+Domable = 250
+
+[NPC96] 'Tigre
+Name = Tigre
+Head = 0
+Body = 147
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 600
+GiveGLD = 0
+MinHP = 800
+MaxHP = 800
+MaxHIT = 70
+MinHIT = 30
+PoderAtaque = 700
+PoderEvasion = 45
+Domable = 350
+
+
+[NPC97] 'Pato
+Name = Pato
+Head = 0
+Body = 88
+Heading = 3
+Movement = 2
+Attackable = 1
+Hostile = 0
+Alineacion = 0
+GiveEXP = 20
+GiveGLD = 0
+MinHP = 30
+MaxHP = 30
+MaxHIT = 5
+MinHIT = 3
+PoderAtaque = 10
+PoderEvasion = 10
+Domable = 50
+
+[NPC98] ' Demonio
+Name = Demonio
+NpcType = 5
+Body = 258
+Heading = 3
+Attackable = 0
+Desc=Si deseás unirte a las fuerzas de Lord Azhimur escribe /ENLISTAR
+Movement = 1
+Faccion = 2
+
+[NPC100] ' Guardia
+Name=Guardia Imperial
+NpcType = 2
+Faccion = 1
+Desc=Dare carcel a todos los criminales y los perseguire hasta el fin.
+Head = 0
+Body = 15
+Heading = 3
+Movement = 10
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 115
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+
+[NPC101] ' Apostador
+Name = Apostador
+NpcType = 7
+Desc=Para apostar escribe /apostar seguido del monto!
+Head = 0
+Body = 15
+Heading = 3
+Movement = 1
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 1000
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 115
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+
+[NPC102] ' Recompensa
+Name = sabio
+NpcType = 10
+Desc=Podrías aprender cosas interesantes en una charla con un viejo como yo. Escribe /hablar si quieres intentarlo.
+Head = 0
+Body = 15
+Heading = 3
+Movement = 10
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 1000
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 115
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+[NPC103] 'NPC
+Name=Fuego fatuo
+Head = 0
+Body = 144
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Domable = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 600
+MaxHP = 600
+MaxHIT = 100
+MinHIT = 100
+PoderAtaque = 1000
+PoderEvasion = 500
+Domable = 0
+LanzaSpells = 1
+Sp1 = 23
+AguaValida = 1
+
+[NPC109] ' Recompensa
+Name=Viejo sabio
+NpcType = 11
+Desc=Pocos son los que logran llegar a donde yo me encuentro. Si tienes la voluntad y la grandeza de aprender, puedo enseñarte muchas cosas. Escribe /hablar para hacerlo.
+Head = 7
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+
+[NPC112] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Faccion = 2
+Desc= Muévete sabandija!
+Head = 0
+Body = 268
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 1000
+MaxHP = 1000
+MaxHIT = 250
+MinHIT = 115
+PosOrig = 0
+DEF = 30
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 400
+PoderEvasion = 400
+Domable = 0
+
+[NPC140] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Faccion = 2
+Desc=Estorbas el paso!
+Head = 102
+Body = 56
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC141] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Faccion = 2
+Desc=Estorbas el paso!
+Head = 102
+Body = 56
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC142] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Faccion = 2
+Desc=Estorbas el paso!
+Head = 103
+Body = 56
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC143] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Desc=Estorbas el paso!
+Faccion = 2
+Head = 6
+Body = 130
+Heading = 3
+Movement = 2
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC144] ' Guardia
+Name=Guardia del Caos
+NpcType = 2
+Faccion = 2
+Desc=Muévete sabandija!
+Head = 6
+Body = 198
+Heading = 3
+Movement = 3
+Attackable = 1
+Comercia = 0
+Hostile = 0
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 9550
+MaxHP = 9550
+MaxHIT = 100
+MinHIT = 100
+PosOrig = 0
+DEF = 10
+Alineacion = 0
+Respawn = 0
+NROITEMS = 0
+PoderAtaque = 1500
+PoderEvasion = 1500
+Domable = 0
+LanzaSpells = 2
+Sp1 = 24
+Sp2 = 23
+
+[NPC149] 'NPC
+Name = Banquero
+Desc=¿Deseas depositar o extraer items? Tan solo dime lo que necesitas y yo te ayudaré.
+Head = 0
+Body = 37
+Heading = 3
+Movement = 1
+NpcType = 4
+Domable = 0
+Info=Banquero de Lindos.
+
+[NPC150] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550. T: 135, 381, 238, 675.
+Name = Sastre
+Desc=¡Hola forastero! Puedes obtener aquí las mejores ropas de la zona.
+Head = 0
+Body = 19
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 30
+Inflacion = 0
+Obj1 = 31 - 100
+Obj2 = 32 - 100
+Obj3 = 35 - 100
+Obj4 = 170 - 100
+Obj5 = 240 - 100
+Obj6 = 527 - 100
+Obj7 = 80 - 100
+Obj8 = 45 - 100
+Obj9 = 507 - 100
+Obj10 = 515 - 100
+Obj11 = 560 - 100
+Obj12 = 504 - 100
+Obj13 = 505 - 100
+Obj14 = 506 - 100
+Obj15 = 508 - 100
+Obj16 = 501 - 100
+Obj17 = 502 - 100
+Obj18 = 490 - 100
+Obj19 = 486 - 100
+Obj20 = 511 - 100
+Obj21 = 382 - 100
+Obj22 = 488 - 100
+Obj23 = 512 - 100
+Obj24 = 656 - 100
+Obj25 = 657 - 100
+Obj26 = 694 - 100
+Obj27 = 707 - 100
+Obj28 = 510 - 100
+Obj29 = 513 - 100
+Obj30 = 697 - 100
+BackUp = 1
+Domable = 0
+info=Sastre de Arghal
+
+[NPC151]
+Name = Pirata
+NpcType = 6
+Desc=Vendo pasajes, viajero.
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+NROITEMS = 2
+Obj1 = 747 - 10
+Obj2 = 748 - 10
+TipoItems = 37
+Alineacion = 0
+Respawn = 0
+BackUp = 1
+Domable = 0
+info=pasajes arghal
+
+ [NPC152]
+Name = Pirata
+NpcType = 6
+Desc=¡Acércate y echa un vistazo!
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+NROITEMS = 3
+Obj1 = 734 - 10
+Obj2 = 735 - 10
+Obj3 = 736 - 10
+TipoItems = 37
+Alineacion = 0
+Respawn = 0
+BackUp = 1
+Domable = 0
+info=pasajes banderbill
+
+[NPC153]
+Name = Pirata
+NpcType = 6
+Desc=¡Pasajes! ¡Pasajes!
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+NROITEMS = 5
+Obj1 = 742 - 10
+Obj2 = 743 - 10
+Obj3 = 744 - 10
+Obj4 = 745 - 10
+Obj5 = 746 - 10
+TipoItems = 37
+Alineacion = 0
+Respawn = 0
+BackUp = 1
+Domable = 0
+Info=pasajes Hilidian
+
+[NPC154]
+Name = Pirata
+NpcType = 6
+Desc=¡Viaja por estas tierras con mis pasajes!
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+NROITEMS = 3
+Obj1 = 731 - 10
+Obj2 = 732 - 10
+Obj3 = 733 - 10
+TipoItems = 37
+Alineacion = 0
+Respawn = 0
+BackUp = 1
+Domable = 0
+info=Pasajes Nix
+
+[NPC155]
+Name = Pirata
+NpcType = 6
+Desc=¡Acércate y echa un vistazo!
+Head = 301
+Body = 221
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+Hostile = 0
+NROITEMS = 3
+Obj1 = 737 - 10
+Obj2 = 738 - 10
+Obj3 = 739 - 10
+TipoItems = 37
+Alineacion = 0
+Respawn = 0
+BackUp = 1
+Domable = 0
+info=Pasajes Espe
+
+[NPC127] 'Armaduras: 529, 30, 659, 672, 671, 499, 359, 356, 360. Escudos: 404, 608, 130, 609, 610.Cascos: 568, 566, 567 565, 564.
+Name = Herrero
+Desc=En estos momentos de guerra, si eres un luchador nada mejor que una buena armadura para tu protección.
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 12
+Obj1 = 529 - 100
+Obj2 = 30 - 100
+Obj3 = 774 - 100
+Obj4 = 672 - 100
+Obj5 = 359 - 100
+Obj6 = 499 - 100
+Obj7 = 671 - 100
+Obj8 = 356 - 100
+Obj9 = 360 - 100
+Obj10 = 391 - 100
+Obj11 = 243 - 100
+Obj12 = 759 - 100
+BackUp = 1
+Domable = 0
+info=Herrero de Esperanza (armaduras)
+
+[NPC156] 'Ent
+Name = Ent
+Body = 164
+Heading = 3
+Movement = 2
+MinHP = 600
+MaxHP = 600
+Attackable = 1
+MaxHIT = 120
+MinHIT = 100
+PoderAtaque = 200
+PoderEvasion = 200
+
+[NPC208]
+Name = Tienda
+Desc=Hola, noble guerrero, si quieres alquilar mi negocio para vender tus objetos hazme doble click.
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+NpcType = 8
+
+[NPC209]
+Name=Ruleta 1
+Desc=Hola, ¿quieres apostar a la ruleta? Manejo apuestas de $10 a $100.
+Apostador = 1
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+
+[NPC210]
+Name=Ruleta 2
+Desc=Hola, ¿quieres apostar a la ruleta? Manejo apuestas de $100 a $1.000.
+Apostador = 2
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+
+[NPC211]
+Name=Ruleta 3
+Desc=Hola, ¿quieres apostar a la ruleta? Manejo apuestas de $1.000 a $10.000.
+Apostador = 3
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+
+[NPC212]
+Name=Ruleta 4
+Desc=Hola, ¿quieres apostar a la ruleta? Manejo apuestas de $10.000 a $100.000.
+Apostador = 4
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+
+[NPC213]
+Name=Ruleta 5
+Desc=Hola, ¿quieres apostar a la ruleta? Manejo apuestas de $100.000 a $1.000.000.
+Apostador = 5
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Respawn = 0
+
+[NPC214] 'Lobo (Invocado) 1.0
+Name = Lobo
+Respawn = 1
+Head = 0
+Body = 10
+Heading = 3
+Movement = 3
+Alineacion = 2
+Attackable = 1
+Comercia = 0
+Hostile = 1
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 75
+MaxHP = 75
+MaxHIT = 20
+MinHIT = 10
+DEF = 8
+PoderAtaque = 80
+PoderEvasion = 30
+Snd1 = 35
+SND2 = 9
+
+[NPC215] 'Zombie (Invocado) 1.0
+Name = Zombie
+Head = 0
+Body = 11
+Heading = 3
+Movement = 3
+Alineacion = 2
+Attackable = 1
+Comercia = 0
+Hostile = 1
+GiveEXP = 0
+GiveGLD = 0
+MinHP = 250
+MaxHP = 250
+MaxHIT = 30
+MinHIT = 25
+DEF = 20
+NROITEMS = 0
+PoderAtaque = 100
+PoderEvasion = 20
+SND2 = 33
+snd3 = 56
+
+[NPC216] 'NPC
+Name = Carpintero
+Desc=Los mejores Arcos y Las mejores Flechas de estas tierras
+Head = 4
+Body = 1
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 2
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 11
+Obj1 = 474 - 100
+Obj2 = 475 - 100
+Obj3 = 476 - 100
+Obj4 = 478 - 100
+Obj5 = 596 - 100
+Obj6 = 479 - 100
+Obj7 = 597 - 100
+Obj8 = 600 - 100
+Obj9 = 480 - 100
+Obj10 = 551 - 100
+Obj11 = 552 - 100
+BackUp = 1
+Domable = 0
+info=Carpintero de Ullathorpe (Arcos y Flechas)
+
+[NPC217] ' Para los que tan al dope o nacieron asi !
+Name = Cara
+NpcType = 9
+Desc= tienes fea cara? tipea /ROSTRO y yo puedo arreglarlo.
+Head = 500
+Body = 56
+Heading = 3
+Attackable = 0
+Comercia = 0
+Hostile = 0
+
+[NPC219]
+Name = Ullathorpe
+Desc = Ullathorpe
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC220]
+Name = Nix
+Desc = Nix
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC221]
+Name = Banderbill
+Desc = Banderbill
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC222]
+Name = Arghal
+Desc = Arghal
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC223]
+Name = Lindos
+Desc = Lindos
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC224]
+Name=Nueva Esperanza
+Desc=Nueva Esperanza
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC225]
+Name = Hillidian
+Desc = Hillidian
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC226]
+Name=Dungeon Marabel
+Desc=Dungeon Marabel
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC227]
+Name=Dungeon Veriil
+Desc=Dungeon Veriil
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC228]
+Name=Dungeon Ancestral
+Desc=Dungeon Ancestral
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC229]
+Name=Cavernas Heladas
+Desc=Cavernas Heladas
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC230]
+Name=Zona de Agite
+Desc=Zona de Agite
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC231]
+Name=Zona de Plantes
+Desc=Zona de Plantes
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC232]
+Name=Zona de Agite II
+Desc=Zona de Agite II
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC233]
+Name=Isla Pirata
+Desc=Isla Pirata
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC17]
+Name = Cirujano
+NpcType = 9
+Desc=/ROSTRO, Cambiate el rostro deforme
+Head = 4
+Body = 63
+Heading = 3
+Attackable = 0
+Comercia = 0
+Hostile = 0
+
+[NPC234]
+Name=Dungeon Clan
+Desc=Dungeon Clan
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC235]
+Name=Sala de Retos
+Desc=Sala de Retos
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC18]
+Name=Sala de GM's
+Desc=Sala de GM's
+Head = 4
+Body = 63
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 0
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+Domable = 0
+BackUp = 1
+
+[NPC23]
+Name = Herrero
+Desc=Para aventurarte, guerrero, necesitaras cubrir tu cuerpo con gruesas armaduras (bajos).
+Head = 0
+Body = 16
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 11
+Obj1 = 30 - 100
+Obj2 = 671 - 100
+Obj3 = 581 - 100
+Obj4 = 582 - 100
+Obj5 = 586 - 100
+Obj6 = 243 - 100
+Obj7 = 584 - 100
+Obj8 = 500 - 100
+Obj9 = 693 - 100
+Obj10 = 667 - 100
+Obj11 = 483 - 100
+BackUp = 1
+Domable = 0
+
+[NPC236] 'DUELO
+Name = Duelo
+NpcType = 10
+Desc=Saludos guerrero, soy el organizador de duelos en estas tierras, si deseas duelear escribe /DUELO . ¡Mucha suerte!.
+Head = 103
+Heading = 3
+Body = 63
+Movement = 1
+Attackable = 0
+Respawn = 0
+Hostile = 0
+Domable = 0
+Alineacion = 0
+BackUp = 1
+
+[NPC237]
+Name=Hades
+Body = 355
+Heading = 3
+Movement = 10
+Alineacion = 2
+Attackable = 1
+Respawn = 0
+Comercia = 0
+AfectaParalisis = 1
+Hostile = 1
+GiveEXP = 100000
+GiveGLD = 5000000
+MinHP = 300000
+MaxHP = 300000
+MaxHIT = 280
+MinHIT = 240
+DEF = 0
+Veneno = 1
+PoderAtaque = 300
+PoderEvasion = 60
+snd3 = 64
+NROITEMS = 4
+Obj1 = 407 - 1
+Obj2 = 781 - 1
+Obj3 = 780 - 1
+Obj4 = 774 - 1
+Probabilidad=25
+LanzaSpells=1
+Sp1=35
+
+
+[NPC238] 'NPC
+Name=Viajero
+Desc= Combates 1
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+
+[NPC239] 'NPC
+Name=Viajero
+Desc= Combates 2
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+
+[NPC240] 'NPC
+Name=Viajero
+Desc= Combates 3
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0 
+
+[NPC241] 'NPC
+Name=Viajero
+Desc= Arghelin
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0 
+
+[NPC242] 'NPC
+Name=Viajero
+Desc= ¿Eres nivel bajo? Entra aquí tendras unos Npcs de entrenamiento muy efectivos.
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0 
+
+[NPC243] 'NPC
+Name=Viajero
+Desc= Enlistamiento de facciónes.
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC244] 'NPC
+Name=Viajero
+Desc= Arghelin
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC245] 'NPC Sastre: 697, 31, 32, 35, 80, 170, 506, 505, 504, 240, 527, 507, 502, 515, 382, 511, 550. T: 135, 381, 238, 675.
+Name = Sastre
+Desc=¿Queres ser elegante? no dudes en hacerme doble click.
+Head = 12
+Body = 79
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+NROITEMS = 2
+Inflacion = 0
+Obj1 = 656 - 100
+Obj2 = 657 - 100
+BackUp = 1
+Domable = 0
+info=Sastre
+
+[NPC246] 'NPC
+Name=Zeus
+Desc= Hola, mi nombre es Zeus Dios de los dioses del olimpo!, Realiza las misiones que te encomiendo y obtendrás muchos privilegios que te harán mas fuerte! 
+Head=4
+NpcType=14
+Body=138
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC247] 'NPC
+Name=Viajero
+Desc= Ullathorpe.
+Head=4
+Body=175
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC248] 'NPC
+Name=Deathmatch
+Desc= Hazme doble click si deseas entrar al deathmatch.
+NpcType=12
+Head=102
+Body=104
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC249] 'NPC
+Name=Quest
+Desc= Hazme doble click si deseas hacer una QUEST, si quieres abandonar una quest tipeá /NOQUEST en donde estes, si quieres saber cuanto te falta para terminar una quest tipeá /INFOQUEST y lo sabras.
+NpcType=13
+Head=102
+Body=104
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+[NPC250]
+Name=Viajero
+NpcType=6
+Desc=¡Viaja por estas tierras con mis pasajes!
+Head=4
+Body=2
+Heading=3
+Movement=1
+Attackable=0
+Comercia=1
+Hostile=0
+NROITEMS = 11
+Obj1 = 845 - 10
+Obj2 = 846 - 10
+Obj3 = 847 - 10
+Obj4 = 848 - 10
+Obj5 = 849 - 10
+Obj6 = 864 - 10
+Obj7 = 865 - 10
+Obj8 = 866 - 10
+Obj9 = 867 - 10
+Obj10 = 868 - 10
+Obj11 = 869 - 10
+TipoItems=37
+Alineacion=0
+Domable=0
+info=Pasajes
+
+[NPC251]
+Name=Tienda
+Desc=Hola, noble guerrero, si quieres alquilar mi negocio para vender tus objetos hazme doble click.
+Head=4
+Body=3
+Heading=3
+Movement=1
+ReSpawn=0
+NpcType=8
+
+[NPC252]
+Name=Hefesto
+Desc= Me llamo Hefesto, traéme lo que propongo y hare forjaré tus elementos!
+Head=6
+NpcType=15
+Body=35
+Heading=3
+Movement=1
+Attackable=0
+Comercia=0
+Hostile=0
+Alineacion=0
+Domable=0
+
+
+[NPC253]
+Name = sastre
+Desc=Regalo Gorritos, Feliz Navidad!
+Head = 4
+Body = 3
+Heading = 3
+Movement = 1
+Attackable = 0
+Comercia = 1
+TipoItems = 3
+Hostile = 0
+Alineacion = 0
+Respawn = 0
+NROITEMS = 11
+Obj1 = 787 - 100
+Obj2 = 787 - 100
+Obj3 = 787 - 100
+Obj4 = 787 - 100
+Obj5 = 787 - 100
+Obj6 = 787 - 100
+Obj7 = 787 - 100
+Obj8 = 787 - 100
+Obj9 = 787 - 100
+Obj10 = 787 - 100
+Obj11 = 787 - 100
+BackUp = 1
+Domable = 0

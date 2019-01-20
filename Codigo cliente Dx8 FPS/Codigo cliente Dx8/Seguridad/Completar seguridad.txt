@@ -1,0 +1,59 @@
+busca:
+------------------------------------------------
+Public NoPuedeUsar As Boolean
+-------------------------------------------------------
+abajo:
+----------------------------------------------------
+Public porptnousa As Boolean
+----------------------------------------------------------
+busca:
+----------------------------------------------------
+If timers(1) >= tUs Then
+            timers(1) = 0
+            NoPuedeUsar = False
+        End If
+--------------------------------
+abajo:
+---------------------------------------
+If timers(2) >= tUs Then
+            timers(2) = 0
+            porptnousa = False
+        End If
+-----------------------------
+En Frmmain Remplaza este sub:
+-------------------------------------------------
+Private Sub imgObjeto_DblClick(Index As Integer)
+
+If frmCarp.Visible Or frmHerrero.Visible Then Exit Sub
+
+If ItemElegido = Index Then
+
+If Not porptnousa Then
+porptnousa = True
+Call SendData("USE" & ItemElegido)
+'Else
+'Debug.Print "no"
+End If
+
+End If
+    
+End Sub
+
+-------------------------------------------
+Remplaza este Sub en frmmain
+---------------------------------------------
+
+Private Sub lblObjCant_DblClick(Index As Integer)
+
+If frmCarp.Visible Or frmHerrero.Visible Then Exit Sub
+
+If Not porptnousa Then
+porptnousa = True
+If ItemElegido = Index Then Call SendData("USE" & ItemElegido)
+End If
+
+End Sub
+---------------------------------------------------------------
+
+
+

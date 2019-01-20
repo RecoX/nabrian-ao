@@ -1,0 +1,55 @@
+[INIT]
+NumObjs=19
+
+[Obj1] ' Cuchara
+Index=163
+
+[Obj2] ' Silla
+Index=168
+
+[Obj2] ' Laud
+Index=469
+
+
+[Obj5] ' Mueble 
+Index=167
+
+[Obj6] ' Arco simple
+Index=478
+
+[Obj7] ' Arco simple reforzado
+Index=596
+
+[Obj8] ' Arco compuesto
+Index=479
+
+[Obj9] ' Arco de las tinieblas
+Index=597
+Recompensa=1
+
+[Obj10] ' Arco elfico
+Index=600
+Recompensa=1
+
+[Obj11] ' vara
+Index=726
+
+[Obj12] ' baston
+Index=728
+
+[Obj13] ' baculo
+Index=705
+Recompensa=2
+
+[Obj14] ' Flecha
+Index=480
+
+[Obj15] ' Flecha +1
+Index=551
+
+[Obj16] ' Flecha +2
+Index=552
+
+[Obj17] ' Fragata
+Index=474
+

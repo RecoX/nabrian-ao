@@ -1,0 +1,124 @@
+'-Tipo: 1(matar npc) 2(matar gente)
+[Init]
+Num=13
+
+
+'Acá ponemos el numero que es cada quest.. tienen que ser exactamente iguales que en el Name=, porque sino no va a mandar la info.
+[Nombres]
+Matar 3 Rey Dragón=1
+Matar 2 Gran Dragón Azul=2
+Matar 2 Gran Dragón Verde=3
+Matar 4 Golems de plata=4
+Matar 4 Golems de Oro=5
+Matar 2 Acólito=6
+Matar 2 Demonio Abismal=7
+Matar 10 Momias=8
+Matar 5 Yeti=9
+Matar 12 Oso polar=10
+Matar 12 Ogro polar=11
+Matar 3 Defensor del Mal=12
+Matar 5 Engendros del Demonio=13
+
+[Quest1]
+Name=Matar 3 Rey Dragón
+Tipo=1
+MataNPC=625
+BuscaNPC=D. Dragon(13)
+Cant=3
+Premio=30
+
+[Quest2]
+Name=Matar 2 Gran Dragón Azul
+Tipo=1
+MataNPC=622
+BuscaNPC=D. Ancestral (70)
+Cant=2
+Premio=22
+
+[Quest3]
+Name=Matar 2 Gran Dragón Verde
+Tipo=1
+MataNPC=623
+BuscaNPC=D. Inferno (20)
+Cant=2
+Premio=22
+
+[Quest4]
+Name=Matar 4 Golems de plata
+Tipo=1
+MataNPC=619
+BuscaNPC=D. Golem(31)
+Cant=4
+Premio=15
+
+[Quest5]
+Name=Matar 4 Golems de Oro
+Tipo=1
+MataNPC=620
+BuscaNPC=D. Golem(31)
+Cant=4
+Premio=19
+
+[Quest6]
+Name=Matar 2 Acólito
+Tipo=1
+MataNPC=614
+BuscaNPC=C. misteriosa(44)
+Cant=2
+Premio=13
+
+[Quest7]
+Name=Matar 2 Demonio Abismal
+Tipo=1
+MataNPC=613
+BuscaNPC=C. misteriosa(44)
+Cant=2
+Premio=10
+
+[Quest8]
+Name=Matar 10 Momias
+Tipo=1
+MataNPC=607
+BuscaNPC=D. Dragon(13)
+Cant=10
+Premio=5
+
+[Quest9]
+Name=Matar 5 Yeti
+Tipo=1
+MataNPC=615
+BuscaNPC=Polo centro(59)
+Cant=5
+Premio=10
+
+[Quest10]
+Name=Matar 12 Oso polar
+Tipo=1
+MataNPC=594
+BuscaNPC=Polo
+Cant=12
+Premio=5
+
+[Quest11]
+Name=Matar 12 Ogro polar
+Tipo=1
+MataNPC=606
+BuscaNPC=Polo
+Cant=12
+Premio=5
+
+[Quest12]
+Name=Matar 3 Defensor del Mal
+Tipo=1
+MataNPC=569
+BuscaNPC=D. Inferno (20)
+Cant=3
+Premio=7
+
+[Quest13]
+Name=Matar 5 Engendros del Demonio
+Tipo=1
+MataNPC=571
+BuscaNPC=D. Ancestral (70)
+Cant=5
+Premio=11

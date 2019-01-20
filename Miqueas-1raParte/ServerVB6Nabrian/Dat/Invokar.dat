@@ -1,0 +1,123 @@
+'+-+-+-+-+-+-+-+-+-+-+-+-+- Lunes 13 Dic. 2004 El Presi +-+-+-+-+-+-+-+-+-+-+-+-+-
+
+[INIT]
+NumNPCs=39
+
+
+[LIST]
+NI1=535
+NN1=Hormiga
+
+NI2=500
+NN2=Murcielago
+
+NI3=532
+NN3=Aguila
+
+NI4=536
+NN4=Rata
+
+NI5=506
+NN5=Gallo Salvaje
+
+NI6=515
+NN6=Serpiente
+
+NI7=533
+NN7=Cuervo
+
+NI8=525
+NN8=Escoprion
+
+NI9=503
+NN9=Esqueleto
+
+NI10=508
+NN10=Esqueleto Guerrero
+
+NI11=501
+NN11=Lobo
+
+NI12=557
+NN12=Jabalí Salvaje
+
+NI13=505
+NN13=Goblin
+
+NI14=530
+NN14=Bandido
+
+NI15=502
+NN15=Zombie
+
+NI16=507
+NN16=Lord Zombie
+
+NI17=523
+NN17=Orco
+
+NI18=549
+NN18=Orco brujo
+
+NI19=531
+NN19=Asesino
+
+NI20=539
+NN20=Tortuga gigante
+
+NI21=538
+NN21=Oso pardo
+
+NI22=510
+NN22=Araña gigante
+
+NI23=537
+NN23=Beholder
+
+NI24=541
+NN24=Ogro
+
+NI25=543
+NN25=Demonio
+
+NI26=548
+NN26=Leviantan
+
+NI27=639
+NN27=Galeón fantasma
+
+NI28=555
+NN28=Lord orco
+
+NI29=551
+NN29=Mago malvado
+
+NI30=554
+NN30=Liche
+
+NI31=591
+NN31=Lobo siberiano
+
+NI32=594
+NN32=Oso polar
+
+NI33=615
+NN33=Yeti
+
+NI34=550
+NN34=Bruja
+
+NI35=553
+NN35=Medusa
+
+NI36=540
+NN36=Duende
+
+NI37=611
+NN37=Aparicion
+
+NI38=616
+NN38=G.piedra
+
+NI39=579
+NN39=Orco Mayor

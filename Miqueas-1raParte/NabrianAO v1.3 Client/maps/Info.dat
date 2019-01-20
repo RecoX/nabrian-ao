@@ -1,0 +1,641 @@
+[INIT]
+NumMaps=77
+
+[Mapa1]
+Name=Ullathorpe
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+Pk=1
+MusicNumMidi=4
+
+[Mapa2]
+Name=Arghelin
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+Pk=1
+MusicNum=2
+
+[Mapa3]
+Name=Combates
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa4]
+Name=Entrada dungeon abismal
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+BackUp=0
+MusicNumMidi=12
+
+[Mapa5]
+Name=Evento portales automático
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+
+[Mapa6]
+Name=Entrenamiento inicial
+Terreno=BOSQUE
+Zona=CAMPO
+BackUp=0
+Pk=1
+
+[Mapa7]
+Name=Retos 1vs1
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+
+[Mapa8]
+Name=Retos
+Terreno=BOSQUE
+Zona=CAMPO
+BackUp=1
+
+[Mapa9]
+Name=Requipamiento criminal
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 15
+LeftPunto= 2
+
+[Mapa10]
+Name=Requipamiento ciudadano
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 15
+LeftPunto= 1
+
+[Mapa11]
+Name=Batalla the team.
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 15
+LeftPunto= 5
+
+[Mapa12]
+Name=Mapa de torneos.
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 15
+LeftPunto= 6
+
+[Mapa13]
+Name=Entrada Dungeon Dragon
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 15
+LeftPunto= 7
+MusicNumMidi=18
+
+[Mapa14]
+Name=Mapa de espera
+Terreno=BOSQUE
+Zona=CAMPO
+TopPunto= 16
+LeftPunto= 5
+Pk=1
+
+[Mapa15]
+Name=Torneo automático 1vs1
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa16]
+Name=Deathmach Automático
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa17]
+Name=Cueva misteriosa
+Terreno=DESIERTO
+Zona=CAMPO
+TopPunto=15
+LeftPunto=10
+MusicNumMidi=9
+
+[Mapa18]
+Name=Laberinto
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+
+[Mapa19]
+Name=Castillo de clanes
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNum=2
+
+[Mapa20]
+Name=Desierto
+Terreno=DESIERTO
+Zona=CAMPO
+TopPunto= 16
+LeftPunto= 9
+
+[Mapa21]
+Name=Prision
+Terreno=BOSQUE
+Zona=CAMPO
+Pk=1
+
+[Mapa22]
+Name=Dungeon Abismal
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=5
+
+[Mapa23]
+Name=Infierno
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+
+[Mapa24]
+Name=Mapa de los dioses.
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+
+[Mapa25]
+Name=Plantes automaticos
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa26]
+Name=Protector batalla
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa27]
+Name=Base criminal (protector)
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa28]
+Name=Base Ciudadana (protector)
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa29]
+Name=Cueva misteriosa
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=9
+
+[Mapa30]
+Name=Carreras
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa31]
+Name=Entrada a Dungeon Golem
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa32]
+Name=Isla pirata
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+Pk=1
+MusicNum=1
+
+[Mapa33]
+Name=Deathmatch
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa34]
+Name=Reto por personaje
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa35]
+Name=Aguas de Arghelin
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa36]
+Name=Alta mar
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa37]
+Name=Aguas de Arghelin
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa38]
+Name=Aguas profundas
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa39]
+Name=Alta mar
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa40]
+Name=Bosque
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa41]
+Name=Cementerio
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=20
+
+[Mapa42]
+Name=Aguas de ullathorpe
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa43]
+Name=Alta mar
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa44]
+Name=Bosque
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa45]
+Name=Bosque
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa46]
+Name=Planices del oeste
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa47]
+Name=Alta mar
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa48]
+Name=Bosque
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa49]
+Name=Bosque
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa50]
+Name=Aguas profundas
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa51]
+Name=Dungeon Dragon
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=18
+
+[Mapa52]
+Name=Dungeon Dragon
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=18
+
+[Mapa53]
+Name=Dungeon Golem
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=7
+
+[Mapa54]
+Name=G. Plata, bronce, Hielo
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=7
+
+[Mapa55]
+Name=Golem de Oro
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=7
+
+[Mapa56]
+Name=Dungeon Abismal
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=7
+
+[Mapa57]
+Name=Cuartel faccionario
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNum=2
+
+[Mapa58]
+Name=Polo oeste
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa59]
+Name=Polo centro
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa60]
+Name=Polo este
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa61]
+Name=Dota Alls
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa62]
+Name=Guerra de clanes
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa63]
+Name=Arghal
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+MusicNum=1
+
+[Mapa64]
+Name=Banderbill
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+MusicNum=3
+
+[Mapa65]
+Name=Aguas profundas
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa66]
+Name=Aguas de arghal
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=11
+
+[Mapa67]
+Name=Bosque Dork Norte
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa68]
+Name=Bosque Dork sur
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=6
+
+[Mapa69]
+Name=Cielo
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+Pk=1
+
+[Mapa70]
+Name=Entrada D. Ancestral
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+
+[Mapa71]
+Name=D. Inferno
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=18
+
+[Mapa72]
+Name=Inferno
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=18
+
+[Mapa73]
+Name=D. Ancestral
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=14
+
+[Mapa74]
+Name=Ancestral
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0
+MusicNumMidi=14
+
+[Mapa75]
+Name=Entrada a Ultratumba
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+
+[Mapa76]
+Name=Ultratumba
+NoMagia=0
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=1
+
+[Mapa77]
+Name=Torneos y eventos.
+Terreno=BOSQUE
+Zona=CAMPO
+Restringir=0
+BackUp=0

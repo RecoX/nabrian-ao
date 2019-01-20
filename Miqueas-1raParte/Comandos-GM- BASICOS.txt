@@ -1,0 +1,28 @@
+Comandos !
+
+/hora >> Manda un mensaje por consola con la hora.
+/rmsg >> Escribir por consola.+
+/rvsg >> escribe por consola sin que aparesca tu nombre.
+/torneo ¨cupos¨ >> sirve para abrir torneo.
+/vertorneo >> ve cuales usuarios entraron para sumonear.
+/sum ¨nick¨ >> Sumonea al Usuario.
+/gtorneo ¨numero¨ >> se otorga un torneo.
+/gquest ¨numero¨ >> se otorga quest.
+/ct x -- x -- x >> crea un tp con la coordena ingresada.
+/dt >> parado encima del tp lo destruye.
+/kill >> mata al usuario.
+/revivir >> revive al usuario.
+/ira ¨nick¨ >> va hacia el usuario.
+/buscar >> busca el item.
+/telep Nijhaz x--x--x.
+/ban motivo@nick >> ban.
+/unban ¨nick¨ >> saca el ban.
+/acc ¨numero¨ >> sumonea NPC.
+/masskill >> elimina NPC del campo de visión del GAME MASTER.
+/cc >> lista de criaturas.
+/dobackup >> graba el mundo.
+/limpiarmundo >> limpia el mundo.
+/die >> Auto suidicio ,(morirme)
+/Bloq >> Bloquea un tile en el mapa.
+
+

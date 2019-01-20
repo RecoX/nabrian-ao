@@ -1,0 +1,422 @@
+Function Encripta(Text As String, Encriptar As Boolean) As String
+ 
+On Error GoTo A:
+ 
+Dim A() As Integer
+Dim B() As Integer
+Dim Contraseñas(9) As String
+Dim i As Integer
+Dim ii As Integer
+Dim r As String
+Dim CI As Byte
+Dim ss As Integer
+ 
+Contraseñas(0) = "Rasdas1ic51ogo785rdo"
+Contraseñas(1) = "ssfe846dsfasd468413d"
+Contraseñas(2) = "sfewfsdm98132g84648d"
+Contraseñas(3) = "Aadfd6s41tyh8t4686sd"
+Contraseñas(4) = "sdesfd12efew165e3f16"
+Contraseñas(5) = "Afrwt4rerw8faaaa46sd"
+Contraseñas(6) = "srwewer121321355156d"
+Contraseñas(7) = "swer6we58r1ew10we5ad"
+Contraseñas(8) = "dewerewr6w12e23ew1sd"
+Contraseñas(9) = "dsrewrewredf8496318d"
+ 
+ 
+'********* que contraseña hay q usar? *********
+If Not Encriptar Then
+    CI = val(Asc(Left$(Text, 1))) - 10
+    Text = Right$(Text, Len(Text) - 1)
+End If
+'**********************************************
+ 
+'para no llamar a cada rato a la function
+ss = Len(Text)
+ 
+'Por las dudas
+If ss <= 0 Then Exit Function
+ 
+ReDim A(1 To ss) As Integer
+ 
+    For i = 1 To ss
+        A(i) = Asc(Mid(Text, i, 1))
+    Next i
+ 
+ 
+    If Encriptar Then
+ 
+        '****** Separamos la Contraseña ******
+            CI = RandomNumber(0, 9)
+            ReDim B(1 To Len(Contraseñas(CI))) As Integer
+ 
+            For i = 1 To Len(Contraseñas(CI))
+                B(i) = Asc(Mid(Contraseñas(CI), i, 1))
+            Next i
+        '*************************************
+ 
+        For i = 1 To ss
+            If ii >= UBound(B) Then ii = 0
+            ii = ii + 1
+            A(i) = A(i) + B(ii)
+            If A(i) > 255 Then A(i) = A(i) - 255
+            r = r + Chr(A(i))
+        Next i
+ 
+        Encripta = Chr(CI + 10) & r
+ 
+    Else
+       
+    '****** Separamos la Contraseña ******
+        ReDim B(1 To Len(Contraseñas(CI))) As Integer
+       
+        For i = 1 To Len(Contraseñas(CI))
+            B(i) = Asc(Mid(Contraseñas(CI), i, 1))
+        Next i
+    '*************************************
+       
+        For i = 1 To ss
+        If ii >= UBound(B) Then ii = 0
+            ii = ii + 1
+            A(i) = A(i) - B(ii)
+            If A(i) < 0 Then
+            A(i) = A(i) + 255
+            End If
+            r = r + Chr(A(i))
+        Next i
+       
+        Encripta = r
+   
+    End If
+ 
+A:
+ 
+End Function
+
+
+
+
+
+
+
+
+-----
+
+ Case "SARASA" '---------> OLOGIO
+
+                rdata = Right$(rdata, Len(rdata) - 6)
+                rdata = Encripta(rdata, False)
+
+                cliMD5 = ReadField(5, rdata, 44)
+                tName = ReadField(1, rdata, 44)
+                tName = RTrim(tName)
+                
+                    
+                If Not AsciiValidos(tName) Then
+                    Call SendData(ToIndex, UserIndex, 0, "ERRNombre invalido.")
+                    Exit Sub
+                End If
+                
+
+                Ver = ReadField(3, rdata, 44)
+                If Ver = UltimaVersion Then
+                
+                     If (UserList(UserIndex).flags.ValCoDe = 0) Or (ValidarLoginMSG(UserList(UserIndex).flags.ValCoDe) <> CInt(val(ReadField(4, rdata, 44)))) Then
+                         Call CloseSocket(UserIndex)
+                         Exit Sub
+                     End If
+               
+            
+                tStr = ReadField(6, rdata, 44)
+                
+        
+                tStr = ReadField(7, rdata, 44)
+
+                Call ConnectUser(UserIndex, tName, ReadField(2, rdata, 44), ReadField(5, rdata, 44))
+               Else
+               Call SendData(ToIndex, UserIndex, 0, "!!El cliente es antiguo, por favor verifique la web www.flamiusao.es.tl y descargue el último parche de la versión " & UltimaVersion & " para poder conectarse al juego. Atte. GimathAO Staff.")
+                     Exit Sub
+                End If
+
+
+
+
+
+
+
+
+ Case "LH"
+        If UserList(UserIndex).flags.Muerto Then
+            Call SendData(ToIndex, UserIndex, 0, "MU")
+            Exit Sub
+        End If
+        rdata = Right$(rdata, Len(rdata) - 2)
+        rdata = Encripta(rdata, False)
+        
+        UserList(UserIndex).flags.Hechizo = val(rdata)
+        Exit Sub
+
+
+ Case "USA"
+        rdata = Right$(rdata, Len(rdata) - 3)
+        rdata = Encripta(rdata, False)
+        
+        If val(rdata) <= MAX_INVENTORY_SLOTS And val(rdata) Then
+            If UserList(UserIndex).Invent.Object(val(rdata)).OBJIndex = 0 Then Exit Sub
+        Else
+            Exit Sub
+        End If
+        Call UseInvItem(UserIndex, val(rdata), 0)
+        Exit Sub
+    Case "USE"
+        rdata = Right$(rdata, Len(rdata) - 3)
+        rdata = Encripta(rdata, False)
+        
+        If val(rdata) <= MAX_INVENTORY_SLOTS And val(rdata) Then
+            If UserList(UserIndex).Invent.Object(val(rdata)).OBJIndex = 0 Then Exit Sub
+        Else
+            Exit Sub
+        End If
+        Call UseInvItem(UserIndex, val(rdata), 1)
+        Exit Sub
+
+
+
+
+
+
+ Case "WLC"
+        rdata = Right$(rdata, Len(rdata) - 3)
+        rdata = Encripta(rdata, False)
+        
+        Arg1 = ReadField(1, rdata, 44)
+        Arg2 = ReadField(2, rdata, 44)
+        arg3 = ReadField(3, rdata, 44)
+        If Len(arg3) = 0 Or Len(Arg2) = 0 Or Len(Arg1) = 0 Then Exit Sub
+        If Not Numeric(Arg1) Or Not Numeric(Arg2) Or Not Numeric(arg3) Then Exit Sub
+        
+        POS.Map = UserList(UserIndex).POS.Map
+        POS.X = CInt(Arg1)
+        POS.Y = CInt(Arg2)
+        tLong = CInt(arg3)
+        
+        If UserList(UserIndex).flags.Muerto = 1 Or _
+           UserList(UserIndex).flags.Descansar Or _
+           UserList(UserIndex).flags.Meditando Or _
+           Not InMapBounds(POS.X, POS.Y) Then Exit Sub
+        
+        If Not EnPantalla(UserList(UserIndex).POS, POS, 1) Then
+            Call SendData(ToIndex, UserIndex, 0, "PU" & UserList(UserIndex).POS.X & "," & UserList(UserIndex).POS.Y)
+            Exit Sub
+        End If
+        
+
+
+'CLIENTE
+
+Sub Login(ByVal valcode As Integer)
+
+If EstadoLogin = Normal Then
+        Call SendData("SARASA" & Encripta(UserName & "," & UserPassword & "," & App.Major & "." & App.Minor & "." & App.Revision & "," & valcode & "," & GetMACAddress(), True))
+ElseIf EstadoLogin = CrearNuevoPj Then
+        SendData ("SARAZA" & UserName & "," & UserPassword _
+        & "," & 0 & "," & 0 & "," _
+        & App.Major & "." & App.Minor & "." & App.Revision & _
+        "," & UserRaza & "," & UserSexo & "," & _
+        UserAtributos(1) & "," & UserAtributos(2) & "," & UserAtributos(3) _
+        & "," & UserAtributos(4) & "," & UserAtributos(5) _
+         & "," & UserSkills(1) & "," & UserSkills(2) _
+         & "," & UserSkills(3) & "," & UserSkills(4) _
+         & "," & UserSkills(5) & "," & UserSkills(6) _
+         & "," & UserSkills(7) & "," & UserSkills(8) _
+         & "," & UserSkills(9) & "," & UserSkills(10) _
+         & "," & UserSkills(11) & "," & UserSkills(12) _
+         & "," & UserSkills(13) & "," & UserSkills(14) _
+         & "," & UserSkills(15) & "," & UserSkills(16) _
+         & "," & UserSkills(17) & "," & UserSkills(18) _
+         & "," & UserSkills(19) & "," & UserSkills(20) _
+         & "," & UserSkills(21) & "," & UserSkills(22) & "," & _
+         UserEmail & "," & UserHogar & "," & valcode & "," & GetMACAddress())
+End If
+
+End Sub
+
+
+
+
+Private Sub imgObjeto_DblClick(Index As Integer)
+
+If frmCarp.Visible Or frmHerrero.Visible Then Exit Sub
+SendData "HDP"
+If ItemElegido = Index Then Call SendData("USE" & Encripta(CStr(ItemElegido), True))
+    
+End Sub
+
+
+
+Private Sub lblObjCant_DblClick(Index As Integer)
+
+If frmCarp.Visible Or frmHerrero.Visible Then Exit Sub
+SendData "HDP"
+If ItemElegido = Index Then Call SendData("USE" & Encripta(CStr(ItemElegido), True))
+
+End Sub
+
+
+Private Sub UsarItem()
+    If (ItemElegido > 0) And (ItemElegido < MAX_INVENTORY_SLOTS + 1) Then
+    SendData "HDP"
+    SendData "USA" & Encripta(CStr(ItemElegido), True)
+    
+    End If
+   
+End Sub
+
+
+Private Sub lblLanzar_Click()
+
+If lstHechizos.List(lstHechizos.ListIndex) <> "Nada" And TiempoTranscurrido(LastHechizo) >= IntervaloSpell And TiempoTranscurrido(Hechi) >= IntervaloSpell / 4 Then
+    Call SendData("LH" & Encripta(lstHechizos.ListIndex + 1, True))
+    Call SendData("UK" & Magia)
+End If
+
+End Sub
+
+
+Private Sub Form_Click()
+
+If Cartel Then Cartel = False
+
+If Comerciando = 0 Then
+    Call ConvertCPtoTP(MainViewShp.Left, MainViewShp.Top, MouseX, MouseY, tX, tY)
+    If Abs(UserPos.Y - tY) > 6 Then Exit Sub
+    If Abs(UserPos.X - tX) > 8 Then Exit Sub
+    If EligiendoWhispereo Then
+        Call SendData("WH" & tX & "," & tY)
+        EligiendoWhispereo = False
+        Exit Sub
+    End If
+    
+    If UsingSkill = 0 Then
+        SendData "LC" & tX & "," & tY
+    Else
+        frmPrincipal.MousePointer = vbDefault
+        If UsingSkill = Magia Then
+            If (TiempoTranscurrido(LastHechizo) < IntervaloSpell Or TiempoTranscurrido(Hechi) < IntervaloSpell / 4) Then
+                Exit Sub
+            Else: Hechi = Timer
+            End If
+        ElseIf UsingSkill = Proyectiles Then
+            If (TiempoTranscurrido(LastFlecha) < IntervaloFlecha Or TiempoTranscurrido(Flecho) < IntervaloFlecha / 4) Then
+                Exit Sub
+            Else: Flecho = Timer
+            End If
+        End If
+        Call SendData("WLC" & Encripta(tX & "," & tY & "," & UsingSkill, True))
+        UsingSkill = 0
+    End If
+End If
+
+If boton = vbRightButton Then Call SendData("/TELEPLOC")
+boton = 0
+
+End Sub
+
+
+
+Function Encripta(Text As String, Encriptar As Boolean) As String
+ 
+On Error GoTo a:
+ 
+Dim a() As Integer
+Dim b() As Integer
+Dim Contraseñas(9) As String
+Dim i As Integer
+Dim ii As Integer
+Dim R As String
+Dim CI As Byte
+Dim ss As Integer
+ 
+Contraseñas(0) = "Rasdas1ic51ogo785rdo"
+Contraseñas(1) = "ssfe846dsfasd468413d"
+Contraseñas(2) = "sfewfsdm98132g84648d"
+Contraseñas(3) = "Aadfd6s41tyh8t4686sd"
+Contraseñas(4) = "sdesfd12efew165e3f16"
+Contraseñas(5) = "Afrwt4rerw8faaaa46sd"
+Contraseñas(6) = "srwewer121321355156d"
+Contraseñas(7) = "swer6we58r1ew10we5ad"
+Contraseñas(8) = "dewerewr6w12e23ew1sd"
+Contraseñas(9) = "dsrewrewredf8496318d"
+ 
+ 
+'********* que contraseña hay q usar? *********
+If Not Encriptar Then
+    CI = Val(Asc(Left$(Text, 1))) - 10
+    Text = Right$(Text, Len(Text) - 1)
+End If
+'**********************************************
+ 
+'para no llamar a cada rato a la function
+ss = Len(Text)
+ 
+'Por las dudas
+If ss <= 0 Then Exit Function
+ 
+ReDim a(1 To ss) As Integer
+ 
+    For i = 1 To ss
+        a(i) = Asc(Mid(Text, i, 1))
+    Next i
+ 
+ 
+    If Encriptar Then
+ 
+        '****** Separamos la Contraseña ******
+            CI = RandomNumber(0, 9)
+            ReDim b(1 To Len(Contraseñas(CI))) As Integer
+ 
+            For i = 1 To Len(Contraseñas(CI))
+                b(i) = Asc(Mid(Contraseñas(CI), i, 1))
+            Next i
+        '*************************************
+ 
+        For i = 1 To ss
+            If ii >= UBound(b) Then ii = 0
+            ii = ii + 1
+            a(i) = a(i) + b(ii)
+            If a(i) > 255 Then a(i) = a(i) - 255
+            R = R + Chr(a(i))
+        Next i
+ 
+        Encripta = Chr(CI + 10) & R
+ 
+    Else
+       
+    '****** Separamos la Contraseña ******
+        ReDim b(1 To Len(Contraseñas(CI))) As Integer
+       
+        For i = 1 To Len(Contraseñas(CI))
+            b(i) = Asc(Mid(Contraseñas(CI), i, 1))
+        Next i
+    '*************************************
+       
+        For i = 1 To ss
+        If ii >= UBound(b) Then ii = 0
+            ii = ii + 1
+            a(i) = a(i) - b(ii)
+            If a(i) < 0 Then
+            a(i) = a(i) + 255
+            End If
+            R = R + Chr(a(i))
+        Next i
+       
+        Encripta = R
+   
+    End If
+ 
+a:
+ 
+End Function
+
+
+
+

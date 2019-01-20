@@ -1,0 +1,155 @@
+[INIT]
+NumObjs=51
+
+[Obj1] 'Vestimentas comunes
+Index=31
+
+[Obj2] 'Vestimentas comunes
+Index=32
+
+[Obj3] 'Vestimentas comunes
+Index=35
+
+[OBJ4] 'Vestimenta de mujer
+Index=170
+
+[OBJ5] 'Vestimenta de enano (enano)
+index=240
+
+[OBJ6] 'Vestimenta de enana (enano)
+index=527
+
+[OBJ7] 'Ropa de clan
+Index=80
+
+[OBJ8] 'Ropa de clan
+Index=45
+
+[OBJ9] 'Ropa Común Ovispo (enano)
+index=507
+
+[OBJ10] 'Ropa de aldeano
+index=515
+
+[OBJ11] 'Ropa de aldeano (enano)
+index=560
+
+[OBJ12] 'Ropa común (mujer)
+Index=504
+
+[OBJ13] 'Ropa común (mujer)
+Index=505
+
+[OBJ14] 'Ropa común (mujer)
+Index=506
+
+[OBJ15] 'Ropa Estuario (Mujer)
+index=508
+
+[OBJ16] 'Ropa de campesino
+index=501
+
+[OBJ17] 'Ropa de campesino (enano)
+index=502
+
+[OBJ18] 'Ropa de trabajador
+index=490
+
+[OBJ19] 'Ropa de trabajador (enano)
+index=486
+
+[OBJ20] 'Vestido de novia
+index=511
+
+[OBJ21] 'Vestido de novia (EO)
+index=550
+
+[OBJ22] 'Vestido azul
+index=382
+
+[OBJ23] 'White lady (H/E/EO-M)
+index=488
+
+[OBJ24] 'Calipso (E/G-M)
+index=512
+
+[OBJ25] 'Ropa elegante (H/E/EO-H)
+index=656
+
+[OBJ26] 'Ropa elegante (E/G-H)
+index=657
+
+[OBJ27] 'Ropa elegante (E/G-M)
+index=694
+
+[OBJ28] 'Ropa elegante (E/G-M)
+index=707
+
+[OBJ29] 'Indulgente
+index=510
+
+[OBJ30] 'Vestido de bruja (H/E/EO-M)
+index=513
+
+[OBJ31] 'Vestido de bruja (EO)
+index=514
+
+[OBJ32] 'Túnica roja
+index=239
+
+[OBJ33] 'Túnica roja (enano)
+index=524
+
+[OBJ34] 'Tunica de monje  (H/E/EO-H/M)
+index=381
+
+[OBJ35] 'Túnica de mago  (H/E/EO-H/M)
+index=196
+
+[OBJ36] 'Túnica Lytton
+index=238
+
+[OBJ37] 'Túnica Lytton (E/GH/M)
+index=639
+
+[OBJ38] 'Túnica siniestra (E/G-H/M)
+index=675
+
+[OBJ39] 'Túnica  Morghai (E/G-H)
+index=135
+
+[OBJ40] 'Túnica  Morghai (enano)
+index=588
+
+[OBJ41] 'Tunica Mithril (enano hombre)
+index=525
+
+[OBJ42] 'Tunica Mithril (enano mujer)
+index=526
+
+[OBJ43] 'Tunica Drummond
+index=357
+
+[OBJ44] 'Túnica Drummond (enano)
+index=619
+
+[OBJ45] 'Túnica de la cruz
+index=503
+
+[OBJ46] 'Túnica Legendaria
+index=519
+
+[OBJ47] 'Túnica Legendaria (enano/gnomo)
+index=520
+
+[OBJ48] 'Túnica Zagreb
+index=491
+
+[OBJ49] 'Sombrero de principiante
+index=573
+
+[OBJ50] 'Sombrero de Hechizero
+index=572
+
+[Obj51] 'Trampa Visual
+Index=772

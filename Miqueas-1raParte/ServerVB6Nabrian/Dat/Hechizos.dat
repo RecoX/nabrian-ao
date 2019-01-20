@@ -1,0 +1,1251 @@
+'Tipos....
+'1 actuan sobre HP,MANA,STA,HAM y SED
+'2 actuan sobre los estados de los usuarios
+'3 invocacion
+'4 materializa
+'5 metamorfosis
+
+'Tagets....
+'1.....Usuario
+'2.....Npc
+'3.....Usuario Y Npc
+'4.....Terreno
+
+'14 flecha
+'Misil 17 estilo petrificar
+'16 Petrificar
+'20 Inmo de hielo
+'21 CALABERA NEGRA
+'24 Medita fenix 45
+'33 RELAMPAGO
+
+[INIT]
+NumeroHechizos=50
+
+[HECHIZO1]
+Nombre=Curar veneno
+Desc=Cura el envenenamiento
+PalabrasMagicas=NIHIL VED
+HechizeroMsg=Has curado a
+TargetMsg=Te ha curado del envenenamiento.
+PropioMsg=Te has curado del envenenamiento.
+Tipo=2
+WAV=16
+FXgrh=2
+Loops=3
+CuraVeneno=1
+MinSkill=10
+ManaRequerido=12
+Target=1
+StaRequerido=0
+Particula=13
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+[HECHIZO2]
+Nombre=Dardo Mágico
+Desc=Causa de 150 a 250 puntos de daño al objetivo.
+PalabrasMagicas=FOCU'S T
+HechizeroMsg=Has lanzado un Dardo Mágico sobre
+TargetMsg=lanzo un Dardo Mágico sobre vos.
+Tipo=1
+WAV=69
+FXgrh=15
+Loops=3
+Resis=1
+SubeHP=2
+MinHP=1
+MaxHP=5
+MinSkill=0
+ManaRequerido=0
+Target=2
+StaRequerido=0
+Particula=12
+
+'[HECHIZO2]
+'Nombre=Relámpago
+'Desc=Causa de 150 a 250 puntos de daño al objetivo.
+'PalabrasMagicas=Rélampagé
+'HechizeroMsg=Has lanzado un Relámpago sobre
+'TargetMsg=lanzo un Relámpago sobre vos.
+'Tipo=1
+'WAV=104
+'FXgrh=33
+'Loops=3
+'Resis=1
+'SubeHP=2
+'MinHP=120
+'MaxHP=150
+'MinSkill=0
+'ManaRequerido=0
+'Target=2
+'StaRequerido=0
+'Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO3]
+Nombre=Curar heridas Graves
+Desc=Curar heridas Graves restaura entre 1 y 15 puntos de vida al objetivo.
+PalabrasMagicas=CORP SANC
+
+HechizeroMsg=Has sanado a
+TargetMsg=te ha curado algunas heridas.
+PropioMsg=Te has curado algunas heridas.
+
+Tipo=1
+WAV=17
+FXgrh=41
+SubeHP=1
+MinHP=50
+MaxHP=75
+
+MinSkill=15
+ManaRequerido=10
+
+Target=2
+StaRequerido=0
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO4]
+Nombre=Melodía venenosa
+Desc=Envenenamiento provoca la muerte si no se contraresta el veneno.
+PalabrasMagicas=Venon' Hik
+
+HechizeroMsg=Has envenenado a
+TargetMsg=Te ha envenenado.
+PropioMsg=Te has envenenado.
+Tipo=2
+WAV=106
+FXgrh=3
+Loops=3
+Resis=1
+Envenena=2
+MinSkill=100
+ManaRequerido=650
+StaRequerido=0
+Target=3
+Nivel=34
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO5]
+Nombre=Curar heridas Leves
+Desc=Restaura entre 15 y 40 puntos de salud al objetivo.
+PalabrasMagicas=EN CORP SANCTIS
+
+HechizeroMsg=Has sanado a
+TargetMsg=te ha curado algunas heridas.
+PropioMsg=Te has curado algunas heridas.
+
+Tipo=1
+WAV=18
+FXgrh=9
+loops=1
+
+SubeHP=1
+MinHP=15
+MaxHP=40
+    
+MinSkill=38
+ManaRequerido=40
+
+Target=3
+StaRequerido=0
+Particula=4
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO6]
+Nombre=Flecha magica
+Desc=Causa de 6 a 12 puntos de daño al objetivo.
+PalabrasMagicas=VAX PER
+HechizeroMsg=Has lanzado flecha magica sobre 
+TargetMsg=lanzo flecha magica sobre vos.
+PropioMsg=Has lanzado flecha magica sobre ti.
+Tipo=1
+WAV=19
+FXgrh=14
+Resis=1
+SubeHP=2
+MinHP=6
+MaxHP=12
+    
+MinSkill=12
+ManaRequerido=20
+StaRequerido=0
+Target=3
+Particula=9
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO7]
+Nombre=Flecha eléctrica
+Desc=Causa de 12 a 20 puntos de daño al objetivo.
+PalabrasMagicas=SUN VAP
+HechizeroMsg=Has lanzado flecha electrica sobre
+TargetMsg=lanzo flecha electrica sobre vos.
+PropioMsg=Has lanzado flecha electrica sobre ti.
+Tipo=1
+WAV=16
+FXgrh=14
+Resis=1
+
+SubeHP=2
+MinHP=12
+MaxHP=20
+    
+MinSkill=22
+ManaRequerido=35
+StaRequerido=0
+Target=3
+Particula=9
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO8]
+Nombre=Misil magico
+Desc=Causa de 25 a 35 puntos de daño al objetivo.
+PalabrasMagicas=VAX IN TAR
+HechizeroMsg=Has lanzado misil magico sobre
+TargetMsg=lanzo misil magico sobre vos.
+PropioMsg=Has lanzado misil magico sobre ti.
+Tipo=1
+WAV=16
+FXgrh=10
+loops=1
+Resis=1
+
+SubeHP=2
+MinHP=25
+MaxHP=34
+
+Invoca=0
+NumNpc=0
+
+materializa=0
+itemindex=0
+
+MinSkill=35
+ManaRequerido=45
+StaRequerido=0
+Target=3
+Particula=5
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO10]
+Nombre=Remover paralisis
+Desc=Elimina la parálisis del objetivo.
+PalabrasMagicas=AN HOAX VORP
+
+HechizeroMsg=Le has removido la paralisis a
+TargetMsg=te ha removido la paralisis.
+PropioMsg=Te has removido la paralisis.
+
+Tipo=2
+WAV=211
+FXgrh=0
+
+RemoverParalisis=1
+
+MinSkill=40
+ManaRequerido=300
+StaRequerido=0
+Target=3
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO11]
+Nombre=Resucitar
+Desc=Resucitar un usuario muerto.
+PalabrasMagicas=AHIL KNÄ XÄR
+HechizeroMsg=Has resucitado a
+TargetMsg=te ha resucitado.
+PropioMsg=Te has resucitado.
+Tipo=2
+WAV=111
+FXgrh=0
+Revivir=1
+Invoca=0
+NumNpc=0
+materializa=0
+itemindex=0
+MinSkill=75
+ManaRequerido=1500
+StaRequerido=0
+Target=1
+Nivel=30
+Particula=14
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO12]
+Nombre=Provocar hambre
+Desc=Retira de 20 a 50 puntos de hambre al usuario.
+PalabrasMagicas=ÔL AEX
+
+HechizeroMsg=Le has lanzado hambre a
+TargetMsg=te ha lanzado el hechizo hambre.
+PropioMsg=Te has lanzado el hechizo hambre.
+
+Tipo=1
+WAV=16
+Resis=1
+
+SubeHam=2
+MinHam=20
+MaxHam=50
+    
+MinSkill=3
+ManaRequerido=20
+StaRequerido=0
+Target=1
+Particula=0
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO13]
+Nombre=Terrible hambre de Igôr
+Desc=Retira todos los puntos de hambre al usuario.
+PalabrasMagicas=Ki Gor´dah
+
+HechizeroMsg=Le has lanzado gran hambre a
+TargetMsg=te ha lanzado el hechizo gran hambre.
+PropioMsg=Te has lanzado el hechizo gran hambre.
+
+Tipo=1
+WAV=16
+Resis=1
+
+SubeHam=2
+MinHam=100
+MaxHam=100
+    
+MinSkill=35
+ManaRequerido=350
+StaRequerido=0
+Target=1
+Particula=0
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO14]
+FXgrh=8
+Nombre=Invisibilidad
+Desc=Vuelve invisible por unos segundos a tu personaje u otro usuario.
+HechizeroMsg=Has lanzado invisibilidad sobre
+TargetMsg=lanzo invisibilidad sobre vos.
+PropioMsg=Te has vuelto invisible.
+Tipo=2
+'WAV=110
+WAV=16
+Invisibilidad=1
+MinSkill=87
+ManaRequerido=500
+StaRequerido=0
+Target=1
+Baculo=2
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO15]
+Nombre=Tormenta de fuego
+Desc=Causa de 40 a 60 puntos de daño al objetivo.
+PalabrasMagicas=VAX IN TAR
+HechizeroMsg=Has lanzado Tormenta de fuego sobre
+TargetMsg=lanzo Tormenta de fuego sobre vos.
+PropioMsg=Has lanzado Tormenta de fuego sobre ti.
+Tipo=1
+WAV=27
+FXgrh=7
+Loops=1
+Resis=1
+
+SubeHP=2
+MinHP=40
+MaxHP=60
+    
+MinSkill=60
+ManaRequerido=210
+StaRequerido=0
+Target=3
+Baculo=1
+Particula=3
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO16]
+Nombre=Llamado a la naturaleza
+Desc=Implora ayuda a la madre naturaleza, tres lobos acudirán en tu ayuda.
+PalabrasMagicas=Nature et worg
+HechizeroMsg=Has lanzado Llamado a la naturaleza
+Tipo=4
+WAV=114
+FXgrh=0
+
+Invoca=1
+NumNpc=214
+Cant=3
+
+MinSkill=25
+ManaRequerido=50
+StaRequerido=0
+Target=4
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO17]
+Nombre=Invocar Zombies
+Desc=Invoca la ayuda de los muertos, tres zombies acudirán en tu ayuda.
+PalabrasMagicas=MoÎ cámus
+HechizeroMsg=Has invocado tres Zombies
+Tipo=4
+WAV=17
+FXgrh=0
+Invoca=1
+NumNpc=215
+Cant=3
+MinSkill=35
+ManaRequerido=110
+Target=4
+StaRequerido=0
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO18]
+Nombre=Celeridad
+Desc=Aumenta la agilidad del usuario que recibe el hechizo
+PalabrasMagicas=YUP A'INC
+HechizeroMsg=Has lanzado celeridad sobre 
+TargetMsg=Ha lanzado celeridad sobre ti.
+PropioMsg=Has lanzado celeridad sobre ti.
+Tipo=1
+WAV=17
+FXgrh=32
+
+SubeAG=1
+MinAG=3
+MaxAG=5
+
+MinSkill=20
+ManaRequerido=40
+StaRequerido=0
+Target=1
+Particula=11
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO19]
+Nombre=Torpeza
+Desc=Reduce la agilidad del usuario que recibe el hechizo.
+PalabrasMagicas=ASYNC YUP A'INC
+HechizeroMsg=Has lanzado torpeza sobre 
+TargetMsg=ha lanzado torpeza sobre ti.
+PropioMsg=Has lanzado torpeza sobre ti.
+Tipo=1
+WAV=17
+FXgrh=0
+
+SubeAG=2
+MinAG=3
+MaxAG=5
+
+MinSkill=20
+ManaRequerido=20
+StaRequerido=0
+Target=1
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO20]
+Nombre=Fuerza
+Desc=Aumenta la fuerza del objetivo
+PalabrasMagicas=Ar A'kron
+HechizeroMsg=Has lanzado fuerza sobre 
+TargetMsg=ha lanzado fuerza sobre ti.
+PropioMsg=Has lanzado fuerza sobre ti.
+Tipo=1
+WAV=17
+FXgrh=31
+
+SubeFU=1
+MinFU=3
+MaxFU=5
+
+MinSkill=35
+ManaRequerido=50
+StaRequerido=0
+Target=1
+Particula=10
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO21]
+Nombre=Debilidad
+Desc=Reduce la fuerza del usuario que recibe el hechizo
+PalabrasMagicas=Xoom varp
+HechizeroMsg=Has lanzado Debilidad sobre 
+TargetMsg=ha lanzado Debilidad sobre ti.
+PropioMsg=Has lanzado Debilidad sobre ti.
+Tipo=1
+WAV=17
+FXgrh=0
+
+SubeFU=2
+MinFU=3
+MaxFU=5
+
+MinSkill=35
+ManaRequerido=45
+StaRequerido=0
+Target=1
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO22]
+Nombre=Llamado a Uhkrul
+Desc=Invoka un Dragon Rojo.
+PalabrasMagicas=Arg Zagañarak
+HechizeroMsg=Llamado a Uhkrul
+Tipo=4
+WAV=17
+FXgrh=0
+
+Invoca=1
+NumNpc=547
+Cant=3
+
+MinSkill=100
+ManaRequerido=1000
+StaRequerido=0
+Target=4
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO23]
+Nombre=Descarga eléctrica
+Desc=Causa de 55 a 85 puntos de daño al objetivo.
+PalabrasMagicas=T'HY KOOOL
+HechizeroMsg=Has lanzado Descarga electrica sobre
+TargetMsg=lanzo Descarga electrica vos.
+PropioMsg=Has lanzado Descarga electrica sobre ti.
+Tipo=1
+WAV=104
+FXgrh=11
+Loops=1
+Resis=1
+SubeHP=2
+MinHP=55
+MaxHP=85
+MinSkill=85
+ManaRequerido=460
+StaRequerido=0
+Target=3
+Baculo=2
+Particula=6
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO24]
+Nombre=Inmovilizar
+Desc=Paraliza por un momento a una criatura.
+PalabrasMagicas=Är Prop s'uo
+
+HechizeroMsg=Has inmovilizado a
+TargetMsg=te ha inmovilizado.
+PropioMsg=Te has inmovilizado.
+
+Tipo=2
+WAV=112
+FXgrh=12
+loops=1
+Paraliza=2
+Baculo=1
+MinSkill=60
+ManaRequerido=300
+StaRequerido=0
+Target=3
+Baculo=1
+Particula=7
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO25]
+Nombre=Apocalipsis
+Desc=Causa de 85 a 100 puntos de daño al objetivo.
+PalabrasMagicas=Rahma Nañarak O'al
+HechizeroMsg=Has lanzado Apocalipsis sobre
+TargetMsg=lanzó Apocalipsis sobre vos.
+PropioMsg=Has lanzado Apocalipsis sobre ti.
+Tipo=1
+WAV=116
+FXgrh=13
+Loops=1
+Resis=1
+SubeHP=2
+MinHP=85
+MaxHP=100
+MinSkill=100
+ManaRequerido=1000
+StaRequerido=0
+Target=3
+Baculo=2
+Particula=8
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO26]
+Nombre=Invocar elemental de fuego
+Desc=Invoca un elemental de fuego, que le tira tormentas de fuego al rival.
+PalabrasMagicas=Evarg Icrem Oth
+HechizeroMsg=Has invocado un elemental de fuego
+Tipo=4
+WAV=17
+FXgrh=7
+Invoca=1
+NumNpc=93
+Cant=1
+MinSkill=100
+ManaRequerido=900
+StaRequerido=0
+Target=4
+Baculo=2
+Nivel=25
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO27]
+Nombre=Invocar elemental de agua, que le pega sólo a criaturas.
+Desc=Invocar elemental de agua
+PalabrasMagicas=Wata Mantra'rax
+HechizeroMsg=Has invocado un elemental de agua
+Tipo=4
+WAV=17
+FXgrh=7
+Invoca=1
+NumNpc=92
+Cant=1
+MinSkill=87
+ManaRequerido=950
+StaRequerido=0
+Target=4
+Baculo=2
+Particula=0
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO28]
+Nombre=Invocar elemental de tierra
+Desc=Invocar elemental de tierra, que paraliza al rival.
+PalabrasMagicas=Mu Mantra'rax
+HechizeroMsg=Has invocado un elemental de tierra
+Tipo=4
+WAV=17
+FXgrh=7
+Invoca=1
+NumNpc=94
+Cant=1
+MinSkill=90
+ManaRequerido=950
+StaRequerido=0
+Target=4
+Baculo=3
+Nivel=34
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO29]
+Nombre=Fuegos fatuos
+Desc=Implorar ayuda
+PalabrasMagicas=Othar Annon
+HechizeroMsg=Has invocado un fuego fatuo!
+Tipo=4
+WAV=109
+FXgrh=7
+Invoca=1
+NumNpc=103
+Cant=1
+MinSkill=100
+ManaRequerido=1100
+StaRequerido=0
+Target=4
+Baculo=3
+Nivel=34
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+[HECHIZO30]
+Nombre=Ceguera
+Desc=Ceguera
+HechizeroMsg=Has lanzado ceguera sobre
+TargetMsg=lanzo Descarga ceguera vos.
+PropioMsg=Has lanzado ceguera sobre ti.
+Tipo=2
+WAV=107
+FXgrh=0
+Ceguera=1
+MinSkill=50
+ManaRequerido=520
+Target=1
+Particula=0
+
+
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+[HECHIZO31]
+Nombre=Estupidez
+Desc=El objetivo pierde control sobre su personaje.
+HechizeroMsg=Has lanzado Estupidez sobre
+TargetMsg=lanzo Estupidez sobre vos.
+PropioMsg=Has lanzado Estupidez sobre ti.
+Tipo=2
+WAV=17
+FXgrh=0
+Estupidez=1
+MinSkill=30
+ManaRequerido=500
+StaRequerido=0
+Target=1
+Baculo=3
+Particula=0
+
+[HECHIZO32]
+Nombre=
+Desc=Causa 100 a 200 puntos de daño a la victima.
+PalabrasMagicas=
+HechizeroMsg=
+TargetMsg=
+PropioMsg=
+Tipo=1
+WAV=27
+FXgrh=13
+Loops=1
+Resis=1
+
+SubeHP=2
+MinHP=15000
+MaxHP=15000
+    
+MinSkill=1
+ManaRequerido=1
+
+Target=3
+Particula=0
+[HECHIZO33]
+Nombre=Lazo del Fenix
+Desc=Invoca un Ent
+PalabrasMagicas=Dominusi Gradus
+HechizeroMsg=Has invocado un Ent!
+Tipo=4
+WAV=109
+FXgrh=7
+Invoca=1
+NumNpc=1
+Cant=1
+MinSkill=90
+ManaRequerido=1000
+StaRequerido=0
+Target=4
+
+[HECHIZO34]
+Nombre=Petrificar
+Desc=Paraliza por un momento a la victima.
+PalabrasMagicas=Pëtrìfìcüs
+
+HechizeroMsg=Has paralizado a
+TargetMsg=te ha paralizado.
+PropioMsg=Te has paralizado.
+
+Tipo=2
+WAV=16
+FXgrh=16
+loops=1
+Paraliza=1
+
+MinSkill=37
+ManaRequerido=300
+StaRequerido=0
+Target=2
+Particula=15
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[HECHIZO35]
+Nombre=Furia del Fénix
+Desc=Causa 100 a 140 puntos de daño a la victima.
+PalabrasMagicas=Aëa Lugeum
+HechizeroMsg=Has lanzado Furia del Fénix sobre
+TargetMsg=lanzó Furia del Fénix vos.
+PropioMsg=Has lanzado Furia del Fénix sobre ti.
+Tipo=1
+WAV=115
+FXgrh=18
+Loops=1
+Resis=1
+
+SubeHP=2
+MinHP=95
+MaxHP=115
+baculo=1
+MinSkill=100
+ManaRequerido=1200
+StaRequerido=0
+Target=3
+baculo=1
+Particula=0
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[HECHIZO36]
+Nombre=Paz del Fénix
+Desc=Las criaturas no te atacan por 30 segundos.
+PalabrasMagicas=Extrudere Factum
+
+HechizeroMsg=Le has lanzado Maldición del Fénix a
+TargetMsg=te ha lanzado el hechizo Maldición del Fénix.
+PropioMsg=Te has lanzado Paz del Fénix.
+FXgrh=21
+Tipo=2
+WAV=113
+Resis=1
+
+NoAtacar=1
+    
+MinSkill=75
+ManaRequerido=500
+StaRequerido=0
+Target=1
+Particula=0
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[HECHIZO37]
+Nombre=Bendición del Fénix
+Desc=Resucitar un usuario muerto.
+PalabrasMagicas=Pro Coeptus
+
+HechizeroMsg=Has resucitado a
+TargetMsg=te ha resucitado.
+PropioMsg=Te has resucitado.
+
+Tipo=2
+WAV=108
+FXgrh=20
+
+Revivir=2
+
+Invoca=0
+NumNpc=0
+
+materializa=0
+itemindex=0
+
+MinSkill=40
+ManaRequerido=570
+StaRequerido=0
+Target=1
+Particula=0
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[HECHIZO38]
+Nombre=Aura Divina
+Desc=Aumenta la fuerza y agilidad del objetivo
+PalabrasMagicas=Mo' Oveius
+HechizeroMsg=Has lanzado Aura divina sobre 
+TargetMsg=ha lanzado Aura divina sobre ti.
+PropioMsg=Has lanzado Aura divina sobre ti.
+Tipo=1
+WAV=17
+FXgrh=35
+SubeFU=3
+MinFU=12
+MaxFU=12
+MinSkill=80
+ManaRequerido=275
+StaRequerido=0
+Target=1
+Nivel=34
+Particula=0
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[HECHIZO39]
+Nombre=Regeneración
+Desc=Cura entre 40 y 60 puntos de vida.
+PalabrasMagicas=Agsda Venum
+
+HechizeroMsg=Has sanado a
+TargetMsg=te ha curado algunas heridas.
+PropioMsg=Te has curado algunas heridas.
+
+Tipo=1
+WAV=18
+FXgrh=9
+loops=1
+
+SubeHP=1
+MinHP=40
+MaxHP=60
+    
+MinSkill=50
+ManaRequerido=50
+
+Target=3
+StaRequerido=0
+Particula=0
+'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[HECHIZO40]
+Nombre=Ceguera
+Desc=Ceguera
+PalabrasMagicas=Lum Naêra
+HechizeroMsg=Has maldecido a
+TargetMsg=te maldijo.
+PropioMsg=Te has maldecido tu mismo.
+Tipo=2
+WAV=105
+FXgrh=3
+Loops=3
+Ceguera=1
+MinSkill=50
+ManaRequerido=520
+Paraliza=1
+Envenena=1
+Target=1
+Particula=0
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+[HECHIZO41]
+Nombre=Paralizar
+Desc=Paraliza por un momento al objetivo.
+PalabrasMagicas=HOAX VORP
+
+HechizeroMsg=Has paralizado a
+TargetMsg=te ha paralizado.
+PropioMsg=Te has paralizado.
+
+Tipo=2
+WAV=16
+FXgrh=8
+loops=1
+Paraliza=1
+
+MinSkill=60
+ManaRequerido=350
+StaRequerido=0
+Target=3
+Baculo=1
+Particula=15
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+[HECHIZO42]
+Nombre=Remover estupidez
+Desc=Recupera el control de su personaje.
+PalabrasMagicas=AN ASYNC GAM ALÛ
+
+HechizeroMsg=Le has removido la estupidez a
+TargetMsg=te ha removido la estupidez.
+PropioMsg=Te has removido la estupidez.
+
+Tipo=2
+WAV=211
+FXgrh=0
+
+Estupidez=2
+
+MinSkill=45
+ManaRequerido=300
+StaRequerido=0
+Target=3
+Particula=0
+
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+'&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+[HECHIZO43]
+Nombre=Llamado a las sombras
+Desc=VAl lanzar este hechizo, los usuarios que estén invisibles pasan a estar visibles por unos segundos.
+PalabrasMagicas=Ðhëték’  O’zhê
+HechizeroMsg=Has lanzado Llamado a las sombras sobre
+TargetMsg=Lanzo Llamado a las sombras sobre vos.
+Tipo=6
+WAV=110
+FXgrh=23
+Loops=6
+Invisibilidad=2
+MinSkill=100
+ManaRequerido=800
+StaRequerido=0
+Target=4
+Baculo=2
+Nivel=34
+Particula=0
+
+[HECHIZO44]
+Nombre=Sombra de poder
+Desc=Aumenta la fuerza y agilidad del objetivo
+PalabrasMagicas=Ka' Shad
+HechizeroMsg=Has Sombra de poder sobre 
+TargetMsg=ha lanzado Sombra de podera sobre ti.
+PropioMsg=Has lanzado Sombra de poder sobre ti.
+Tipo=1
+WAV=17
+FXgrh=22
+SubeFU=3
+MinFU=12
+MaxFU=12
+MinSkill=80
+ManaRequerido=275
+StaRequerido=0
+Target=1
+Nivel=34
+Particula=0
+
+[HECHIZO45]
+Nombre=Arco encantado
+Desc=Aumenta el golpe con arco.
+PalabrasMagicas=Thal Amn
+HechizeroMsg=Has lanzado Arco encantado sobre 
+TargetMsg=ha lanzado Arco encantado sobre ti.
+PropioMsg=Has lanzado Arco encantado sobre ti.
+Tipo=2
+Flecha=1
+WAV=17
+FXgrh=22
+MinSkill=80
+ManaRequerido=400
+StaRequerido=0
+Target=1
+Nivel=34
+Particula=0
+
+[HECHIZO46]
+Nombre=Torre
+Desc=Causa de 85 a 100 puntos de daño al objetivo.
+PalabrasMagicas=Aëa Lugeum
+HechizeroMsg=Has lanzado Torre sobre
+TargetMsg=lanzó Torre sobre vos.
+PropioMsg=Has lanzado Torre sobre ti.
+Tipo=1
+WAV=115
+'FXgrh=18 'furia
+FXgrh=42 'torre
+Loops=1
+Resis=1
+SubeHP=2
+MinHP=4000
+MaxHP=4000
+MinSkill=100
+ManaRequerido=0
+StaRequerido=0
+Target=3
+Particula=0
+
+[HECHIZO47]
+Nombre=Portal Luminoso
+Desc=Invocar Portal Luminoso
+PalabrasMagicas=M3$KapÉ
+HechizeroMsg=Has invocado un Portal Luminoso
+WAV=107
+Tipo=3
+Invoca=0
+Cant=1
+Materializa=1
+MinSkill=100
+ManaRequerido=400
+StaRequerido=0
+Target=4
+Baculo=2
+Particula=0
+
+[HECHIZO48]
+Nombre=Super Descarga eléctrica
+Desc=Causa de 70 a 100 puntos de daño al objetivo.
+PalabrasMagicas=STMET'HY KOOOLPX
+HechizeroMsg=Has lanzado Super Descarga electrica sobre
+TargetMsg=lanzo Super Descarga electrica vos.
+PropioMsg=Has lanzado Super Descarga electrica sobre ti.
+Tipo=1
+WAV=36
+FXgrh=38
+Loops=1
+Resis=1
+SubeHP=2
+MinHP=60
+MaxHP=90
+MinSkill=85
+ManaRequerido=800
+StaRequerido=0
+Target=3
+Baculo=2
+Particula=0
+
+[HECHIZO49]
+Nombre=Misil fautico
+Desc=Causa de 35 a 50 puntos de daño al objetivo.
+PalabrasMagicas=furi tuue
+HechizeroMsg=Has lanzado misil fautico sobre
+TargetMsg=lanzo misil fautico sobre vos.
+PropioMsg=Has lanzado misil fautico sobre ti.
+Tipo=1
+WAV=16
+FXgrh=37
+loops=1
+Resis=1
+
+SubeHP=2
+MinHP=35
+MaxHP=50
+
+Invoca=0
+NumNpc=0
+
+materializa=0
+itemindex=0
+
+MinSkill=35
+ManaRequerido=100
+StaRequerido=0
+Target=3
+Particula=0
+
+[HECHIZO50]
+Nombre=Super Apocalipsis
+Desc=Causa de 100 a 125 puntos de daño al objetivo.
+PalabrasMagicas=Rahma Nañarak full
+HechizeroMsg=Has lanzado Super Apocalipsis sobre
+TargetMsg=lanzó Super Apocalipsis sobre vos.
+PropioMsg=Has lanzado Super Apocalipsis sobre ti.
+Tipo=1
+WAV=70
+FXgrh=39
+Loops=1
+Resis=1
+SubeHP=2
+MinHP=90
+MaxHP=105
+MinSkill=100
+ManaRequerido=1400
+StaRequerido=0
+Target=3
+Baculo=2
+Particula=0

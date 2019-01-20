@@ -1,0 +1,17 @@
+[INIT]
+NumEscudos=5
+
+[Escudo1] ' Escudo de tortuga
+Index=404
+
+[Escudo2] ' Rodela
+Index=608
+
+[Escudo3] ' Escudo de hierro
+Index=130
+
+[Escudo4] ' Escudo imperial
+Index=616
+
+[Escudo5] ' Escudo imperial +1
+Index=623

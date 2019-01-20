@@ -1,0 +1,55 @@
+midi 48
+
+
+rey de nix 108 >dateado<
+rey de arghal 106 >dateado<
+
+5 resu >dateado<
+
+239 combates 1 >dateado<
+240 combates 2 >dateado<
+
+7 armas herrero >dateado<
+157 armaduras altos >dateado<
+167 cascos y escudos >dateado<
+23 armaduras bajos >dateado<
+
+168 sastre bajos >dateado<
+169 sastre altos >dateado<
+12 sastre comun >dateado<
+
+14 pociones >dateado<
+
+15 bebida comida >dateado<
+
+33 carpintero >dateado<
+
+46 echizos >dateado<
+200 sombreros baculos >dateado<
+
+
+250 Pasajero
+
+248 death
+
+217 (ROSTRO)
+
+carteles "258 BANCO" 
+222 = pescadores 
+221 = MAGIA 
+209 MINEROS
+
+242 PUERTA
+450 PUERTA
+101 Puerta casita
+
+
+EVENTO DOTA()
+
+-> TORRETA  695
+-> BASE ARRIVA 697
+-> BASE ABAJO 696
+
+
+
+

@@ -1,0 +1,611 @@
+busca Sub main pega:
+
+
+If AoDefDebugger Then
+Call AoDefAntiDebugger
+End
+End If
+
+AoDefAntiShInitialize
+AoDefOriginalClientName = "NabrianAO"
+AoDefClientName = App.exename
+
+If AoDefChangeName Then
+Call AoDefClientOn
+End
+End If
+
+If AoDefMultiClient Then
+Call AoDefMultiClientOn
+End
+End If
+
+
+
+Timer FrmMain 
+
+Nombre: AntiExternos 
+
+Intervalo: 3000
+
+Adentro:
+
+If logged Then
+
+If FindWindow(vbNullString, UCase$("Cheat Engine 5.1.1")) Then
+    Call AoDefCheatDetect("Cheat Engine")
+ElseIf FindWindow(vbNullString, UCase$("AutoClick 2.2")) Then
+    Call AoDefCheatDetect("AutoClick")
+ElseIf FindWindow(vbNullString, UCase$("ART-MONEY")) Then
+    Call AoDefCheatDetect("Art-Money")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.0")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.0")
+ElseIf FindWindow(vbNullString, UCase$("CROWN MAKRO")) Then
+    Call AoDefCheatDetect("Crown Makro")
+ElseIf FindWindow(vbNullString, UCase$("A TRABAJAR...")) Then
+    Call AoDefCheatDetect("Macro")
+ElseIf FindWindow(vbNullString, UCase$("ews")) Then
+    Call AoDefCheatDetect("Macro")
+ElseIf FindWindow(vbNullString, UCase$("Pts")) Then
+    Call AoDefCheatDetect("Auto Potas")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.2")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.2")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.6")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.6")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.7")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.7")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.9")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.9")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 6.0")) Then
+    Call AoDefCheatDetect("Cheat Engine 6.0")
+ElseIf FindWindow(vbNullString, UCase$("SOLOCOVO?")) Then
+    Call AoDefCheatDetect("SOLOCOVO?")
+ElseIf FindWindow(vbNullString, UCase$("MACROCRACK <GONZA_VI@HOTMAIL.COM>")) Then
+    Call AoDefCheatDetect("MACROCRACK <GONZA_VI@HOTMAIL.COM>")
+ElseIf FindWindow(vbNullString, UCase$("MACROCRACK <GONZA_VJ@HOTMAIL.COM>")) Then
+    Call AoDefCheatDetect("MACROCRACK <GONZA_VJ@HOTMAIL.COM>")
+ElseIf FindWindow(vbNullString, UCase$("MACRO CRACK <GONZA_VI@HOTMAIL.COM>")) Then
+    Call AoDefCheatDetect("MACRO CRACK <GONZA_VI@HOTMAIL.COM>")
+ElseIf FindWindow(vbNullString, UCase$("MACRO CRACK <GONZA_VJ@HOTMAIL.COM>")) Then
+    Call AoDefCheatDetect("MACRO CRACK <GONZA_VJ@HOTMAIL.COM>")
+ElseIf FindWindow(vbNullString, UCase$("CHITS")) Then
+    Call AoDefCheatDetect("CHITS")
+ElseIf FindWindow(vbNullString, UCase$("ORKAM")) Then
+    Call AoDefCheatDetect("ORKAM")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V5.4")) Then
+    Call AoDefCheatDetect("Cheat Engine V5.4")
+ElseIf FindWindow(vbNullString, UCase$("Countach")) Then
+    Call AoDefCheatDetect("Countach")
+ElseIf FindWindow(vbNullString, UCase$("MacroRecorder")) Then
+    Call AoDefCheatDetect("MacroRecorder")
+ElseIf FindWindow(vbNullString, UCase$("Ultimatemacros")) Then
+    Call AoDefCheatDetect("Ultimatemacros")
+ElseIf FindWindow(vbNullString, UCase$("MacroLauncher")) Then
+    Call AoDefCheatDetect("MacroLauncher")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.5")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.5")
+ElseIf FindWindow(vbNullString, UCase$("Auto Remo- TheFrank^")) Then
+    Call AoDefCheatDetect("Auto Remo- TheFrank^")
+ElseIf FindWindow(vbNullString, UCase$("WPE PRO")) Then
+    Call AoDefCheatDetect("WPE PRO")
+ElseIf FindWindow(vbNullString, UCase$("WPE PRO - " & AoDefOriginalClientName & ".exe")) Then
+    Call AoDefCheatDetect("WPE PRO")
+ElseIf FindWindow(vbNullString, UCase$("WPE PRO - [WPEPRO2]")) Then
+    Call AoDefCheatDetect("WPE PRO")
+ElseIf FindWindow(vbNullString, UCase$("WPE PRO [WPEPRO2]")) Then
+    Call AoDefCheatDetect("WPE PRO")
+ElseIf FindWindow(vbNullString, UCase$("WPE PRO - " & AoDefOriginalClientName & ".exe" & " - [WPEPRO2]")) Then
+    Call AoDefCheatDetect("WPE PRO")
+ElseIf FindWindow(vbNullString, UCase$("rPE - rEdoX Packet Editor")) Then
+    Call AoDefCheatDetect("rPE - rEdoX Packet Editor")
+ElseIf FindWindow(vbNullString, UCase$("MACRO FOWL")) Then
+    Call AoDefCheatDetect("MACRO FOWL")
+ElseIf FindWindow(vbNullString, UCase$("MINI MACRO BY FOWL WWW.XTREME-ZONE.NET")) Then
+    Call AoDefCheatDetect("MINI MACRO BY FOWL WWW.XTREME-ZONE.NET")
+ElseIf FindWindow(vbNullString, UCase$("MACROSARAZA")) Then
+    Call AoDefCheatDetect("MACROSARAZA")
+ElseIf FindWindow(vbNullString, UCase$("Macroncmurd")) Then
+    Call AoDefCheatDetect("Macroncmurd")
+ElseIf FindWindow(vbNullString, UCase$("AUTOTRAINING")) Then
+    Call AoDefCheatDetect("AUTOTRAINING")
+ElseIf FindWindow(vbNullString, UCase$("0RK4M Version 1.5")) Then
+    Call AoDefCheatDetect("0RK4M Version 1.5")
+ElseIf FindWindow(vbNullString, UCase$("cmd")) Then
+    Call AoDefCheatDetect("cmd")
+ElseIf FindWindow(vbNullString, UCase$("X-Z MULTIMACRO VERSION II BY THEGABYX WWW.XTREME-ZONE.NET")) Then
+    Call AoDefCheatDetect("X-Z MULTIMACRO VERSION II BY THEGABYX WWW.XTREME-ZONE.NET")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 6.0")) Then
+    Call AoDefCheatDetect("Cheat Engine 6.0")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 6.1")) Then
+    Call AoDefCheatDetect("Cheat Engine 6.1")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.4")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.4")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.5")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.5")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.8")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.8")
+ElseIf FindWindow(vbNullString, UCase$("SoLocoVo?")) Then
+    Call AoDefCheatDetect("SOLOCOVO?")
+ElseIf FindWindow(vbNullString, UCase$("-=[ANUBYS RADAR]=-")) Then
+    Call AoDefCheatDetect("-=[ANUBYS RADAR]=-")
+ElseIf FindWindow(vbNullString, UCase$("CRAZY SPEEDER 1.05")) Then
+    Call AoDefCheatDetect("CRAZY SPEEDER 1.05")
+ElseIf FindWindow(vbNullString, UCase$("SET !XSPEED.NET")) Then
+    Call AoDefCheatDetect("SET !XSPEED.NET")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDERXP V1.80 - UNREGISTERED")) Then
+    Call AoDefCheatDetect("SPEEDERXP V1.80 - UNREGISTERED")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.3")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.3")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 5.1")) Then
+    Call AoDefCheatDetect("Cheat Engine 5.1")
+ElseIf FindWindow(vbNullString, UCase$("A SPEEDER")) Then
+    Call AoDefCheatDetect("A SPEEDER")
+ElseIf FindWindow(vbNullString, UCase$("MEMO :P")) Then
+    Call AoDefCheatDetect("MEMO :P")
+ElseIf FindWindow(vbNullString, UCase$("ORK4M VERSION 1.5")) Then
+    Call AoDefCheatDetect("ORK4M VERSION 1.5")
+ElseIf FindWindow(vbNullString, UCase$("BY FEDEX")) Then
+    Call AoDefCheatDetect("By Fedex")
+ElseIf FindWindow(vbNullString, UCase$("!XSPEED.NET +4.59")) Then
+    Call AoDefCheatDetect("!Xspeeder")
+ElseIf FindWindow(vbNullString, UCase$("CAMBIA TITULOS DE CHEATS BY FEDEX")) Then
+    Call AoDefCheatDetect("Cambia titulos")
+ElseIf FindWindow(vbNullString, UCase$("NEWENG OCULTO")) Then
+    Call AoDefCheatDetect("NEWENG OCULTO")
+ElseIf FindWindow(vbNullString, UCase$("SERBIO ENGINE")) Then
+    Call AoDefCheatDetect("SERBIO ENGINE")
+ElseIf FindWindow(vbNullString, UCase$("REYMIX ENGINE 5.3 PUBLIC")) Then
+    Call AoDefCheatDetect("REYMIX ENGINE 5.3 PUBLIC")
+ElseIf FindWindow(vbNullString, UCase$("REY ENGINE 5.2")) Then
+    Call AoDefCheatDetect("REY ENGINE 5.2")
+ElseIf FindWindow(vbNullString, UCase$("AUTOCLICK - BY NIO_SHOOTER")) Then
+    Call AoDefCheatDetect("AUTOCLICK - BY NIO_SHOOTER")
+ElseIf FindWindow(vbNullString, UCase$("TONNER MINER! :D [REG][SKLOV] 2.0")) Then
+    Call AoDefCheatDetect("TONNER MINER! :D [REG][SKLOV] 2.0")
+ElseIf FindWindow(vbNullString, UCase$("Buffy The vamp Slayer")) Then
+    Call AoDefCheatDetect("Buffy The vamp Slayer")
+ElseIf FindWindow(vbNullString, UCase$("Blorb Slayer 1.12.552 (BETA)")) Then
+    Call AoDefCheatDetect("Blorb Slayer 1.12.552 (BETA)")
+ElseIf FindWindow(vbNullString, UCase$("PumaEngine3.0")) Then
+    Call AoDefCheatDetect("PumaEngine3.0")
+ElseIf FindWindow(vbNullString, UCase$("Vicious Engine 5.0")) Then
+    Call AoDefCheatDetect("Vicious Engine 5.0")
+ElseIf FindWindow(vbNullString, UCase$("AkumaEngine33")) Then
+    Call AoDefCheatDetect("AkumaEngine33")
+ElseIf FindWindow(vbNullString, UCase$("Spuc3ngine")) Then
+    Call AoDefCheatDetect("Spuc3ngine")
+ElseIf FindWindow(vbNullString, UCase$("Ultra Engine")) Then
+    Call AoDefCheatDetect("Ultra Engine")
+ElseIf FindWindow(vbNullString, UCase$("Engine")) Then
+    Call AoDefCheatDetect("Engine")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V5.6")) Then
+    Call AoDefCheatDetect("Cheat Engine V5.6")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V5.5")) Then
+    Call AoDefCheatDetect("Cheat Engine V5.5")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V4.4")) Then
+    Call AoDefCheatDetect("Cheat Engine V4.4")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V4.4 German Add-On")) Then
+    Call AoDefCheatDetect("Cheat Engine V4.4 German Add-On")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V4.3")) Then
+    Call AoDefCheatDetect("Cheat Engine V4.3")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V4.2")) Then
+    Call AoDefCheatDetect("Cheat Engine V4.2")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V4.1.1")) Then
+    Call AoDefCheatDetect("Cheat Engine V4.1.1")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V3.3")) Then
+    Call AoDefCheatDetect("Cheat Engine V3.3")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V3.2")) Then
+    Call AoDefCheatDetect("Cheat Engine V3.2")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine V3.1")) Then
+    Call AoDefCheatDetect("Cheat Engine V3.1")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine")) Then
+    Call AoDefCheatDetect("Cheat Engine")
+ElseIf FindWindow(vbNullString, UCase$("danza engine 5.2.150")) Then
+    Call AoDefCheatDetect("danza engine 5.2.150")
+ElseIf FindWindow(vbNullString, UCase$("zenx engine")) Then
+    Call AoDefCheatDetect("zenx engine")
+ElseIf FindWindow(vbNullString, UCase$("MACROMAKER")) Then
+    Call AoDefCheatDetect("Macro Maker")
+ElseIf FindWindow(vbNullString, UCase$("MACREOMAKER - EDIT MACRO")) Then
+    Call AoDefCheatDetect("MACREOMAKER - EDIT MACRO")
+ElseIf FindWindow(vbNullString, UCase$("By Fedex")) Then
+    Call AoDefCheatDetect("Macro Fedex")
+ElseIf FindWindow(vbNullString, UCase$("Macro Mage 1.0")) Then
+    Call AoDefCheatDetect("Macro Mage")
+ElseIf FindWindow(vbNullString, UCase$("Auto* v0.4 (c) 2001 Pete Powa")) Then
+    Call AoDefCheatDetect("Macro Fisher")
+ElseIf FindWindow(vbNullString, UCase$("Kizsada")) Then
+    Call AoDefCheatDetect("Macro K33")
+ElseIf FindWindow(vbNullString, UCase$("Makro K33")) Then
+    Call AoDefCheatDetect("Macro K33")
+ElseIf FindWindow(vbNullString, UCase$("Super Saiyan")) Then
+    Call AoDefCheatDetect("El Chit del Geri")
+ElseIf FindWindow(vbNullString, UCase$("Makro-Piringulete")) Then
+    Call AoDefCheatDetect("Piringulete")
+ElseIf FindWindow(vbNullString, UCase$("Makro-Piringulete 2003")) Then
+    Call AoDefCheatDetect("Piringulete 2003")
+ElseIf FindWindow(vbNullString, UCase$("TUKY2005")) Then
+    Call AoDefCheatDetect("Makro Tuky")
+ElseIf FindWindow(vbNullString, UCase$("Volks")) Then
+    Call AoDefCheatDetect("TURBINAS")
+ElseIf FindWindow(vbNullString, UCase$("Turbinas")) Then
+    Call AoDefCheatDetect("TURBINAS")
+ElseIf FindWindow(vbNullString, UCase$("msn")) Then
+    Call AoDefCheatDetect("msn")
+ElseIf FindWindow(vbNullString, UCase$("Volks")) Then
+    Call AoDefCheatDetect("TURBINAS")
+ElseIf FindWindow(vbNullString, UCase$("MacroSaraza[BETA]")) Then
+    Call AoDefCheatDetect("MacroSaraza[BETA]")
+ElseIf FindWindow(vbNullString, UCase$("Shell_TrayWnd")) Then
+    Call AoDefCheatDetect("Shell_TrayWnd")
+ElseIf FindWindow(vbNullString, UCase$("mmen")) Then
+    Call AoDefCheatDetect("Cheat")
+ElseIf FindWindow(vbNullString, UCase$("heat Celtic AO By Fowl")) Then
+    Call AoDefCheatDetect("Cheat Celtic AO By Fowl")
+ElseIf FindWindow(vbNullString, UCase$("VB6")) Then
+    Call AoDefCheatDetect("VB6")
+ElseIf FindWindow(vbNullString, UCase$("Cheat_Celtic_AO_By_Fowl")) Then
+    Call AoDefCheatDetect("Cheat_Celtic_AO_By_Fowl")
+ElseIf FindWindow(vbNullString, UCase$("Auto Remo")) Then
+    Call AoDefCheatDetect("Auto Remo")
+ElseIf FindWindow(vbNullString, UCase$("Auto Remo")) Then
+    Call AoDefCheatDetect("Auto Remo")
+ElseIf FindWindow(vbNullString, UCase$("Auto Remo By Francohhh (www.neo-zone.activoforo.com)")) Then
+    Call AoDefCheatDetect("Auto Remo By Francohhh (www.neo-zone.activoforo.com)")
+ElseIf FindWindow(vbNullString, UCase$("Macro Configurable")) Then
+    Call AoDefCheatDetect("Macro Configurable")
+ElseIf FindWindow(vbNullString, UCase$("Mega Macro By Francohhh")) Then
+    Call AoDefCheatDetect("Mega Macro By Francohhh")
+ElseIf FindWindow(vbNullString, UCase$("MegaMacro By Francohhh (www.neo-zone.activoforo.com)")) Then
+    Call AoDefCheatDetect("MegaMacro By Francohhh (www.neo-zone.activoforo.com)")
+ElseIf FindWindow(vbNullString, UCase$("By FaKiTa!.-")) Then
+    Call AoDefCheatDetect("By FaKiTa!.-")
+ElseIf FindWindow(vbNullString, UCase$("Macro b53!")) Then
+    Call AoDefCheatDetect("Macro b53!")
+ElseIf FindWindow(vbNullString, UCase$("Borrar...")) Then
+    Call AoDefCheatDetect("Borrar...")
+ElseIf FindWindow(vbNullString, UCase$("Ares.exe")) Then
+    Call AoDefCheatDetect("Ares.exe")
+ElseIf FindWindow(vbNullString, UCase$("Crown Makro")) Then
+    Call AoDefCheatDetect("Crown Makro")
+ElseIf FindWindow(vbNullString, UCase$("AutoPots")) Then
+    Call AoDefCheatDetect("AutoPots")
+ElseIf FindWindow(vbNullString, UCase$("FaKiTa")) Then
+    Call AoDefCheatDetect("AutoPots")
+ElseIf FindWindow(vbNullString, UCase$("FaKiTa.-")) Then
+    Call AoDefCheatDetect("AutoPots")
+ElseIf FindWindow(vbNullString, UCase$("FaKiTa!.-")) Then
+    Call AoDefCheatDetect("AutoPots")
+ElseIf FindWindow(vbNullString, UCase$("msnmsgr")) Then
+    Call AoDefCheatDetect("msnmsgr")
+ElseIf FindWindow(vbNullString, UCase$("MacroSaraza1.3.3")) Then
+    Call AoDefCheatDetect("MacroSaraza1.3.3")
+ElseIf FindWindow(vbNullString, UCase$("MacroSaraza[BETA]")) Then
+    Call AoDefCheatDetect("MacroSaraza[BETA]")
+ElseIf FindWindow(vbNullString, UCase$("Macro-ilanchus")) Then
+    Call AoDefCheatDetect("Macro-ilanchus")
+ElseIf FindWindow(vbNullString, UCase$("MacroSaraza[BETA] ")) Then
+    Call AoDefCheatDetect("MacroSaraza[BETA] ")
+ElseIf FindWindow(vbNullString, UCase$("Autopotear")) Then
+    Call AoDefCheatDetect("Autopotear")
+ElseIf FindWindow(vbNullString, UCase$("MacroSaraza")) Then
+    Call AoDefCheatDetect("MacroSaraza")
+ElseIf FindWindow(vbNullString, UCase$("SpeederXP")) Then
+    Call AoDefCheatDetect("SpeederXP")
+ElseIf FindWindow(vbNullString, UCase$("MLEngine")) Then
+    Call AoDefCheatDetect("MLEngine")
+ElseIf FindWindow(vbNullString, UCase$("Makro-Piringulete")) Then
+    Call AoDefCheatDetect("Makro-Piringulete")
+ElseIf FindWindow(vbNullString, UCase$("MoonLight Engine 1129.1 by llvMoney A.K.A FaaF")) Then
+    Call AoDefCheatDetect("MoonLight Engine 1129.1 by llvMoney A.K.A FaaF")
+ElseIf FindWindow(vbNullString, UCase$("vb6")) Then
+    Call AoDefCheatDetect("vb6")
+ElseIf FindWindow(vbNullString, UCase$("msmsgs")) Then
+    Call AoDefCheatDetect("msmsgs")
+ElseIf FindWindow(vbNullString, UCase$("Macro Magic")) Then
+    Call AoDefCheatDetect("Macro Magic")
+ElseIf FindWindow(vbNullString, UCase$("Iolo Macro Magic")) Then
+    Call AoDefCheatDetect("Iolo Macro Magic")
+ElseIf FindWindow(vbNullString, UCase$("AO Macro II 1.0.2")) Then
+    Call AoDefCheatDetect("AO Macro II 1.0.2")
+ElseIf FindWindow(vbNullString, UCase$("0rk4M")) Then
+    Call AoDefCheatDetect("0rk4M")
+ElseIf FindWindow(vbNullString, UCase$("AOFlechas")) Then
+    Call AoDefCheatDetect("AOFlechas")
+ElseIf FindWindow(vbNullString, UCase$("Auto remo By FaKiTa")) Then
+    Call AoDefCheatDetect("Auto remo By FaKiTa")
+ElseIf FindWindow(vbNullString, UCase$("AutoClick")) Then
+    Call AoDefCheatDetect("AutoClick")
+ElseIf FindWindow(vbNullString, UCase$("Borrar Cartel")) Then
+    Call AoDefCheatDetect("Borrar Cartel")
+ElseIf FindWindow(vbNullString, UCase$("Borrar Cartel 1.0 by BRASUkA!.-")) Then
+    Call AoDefCheatDetect("Borrar Cartel 1.0 by BRASUkA!.-")
+ElseIf FindWindow(vbNullString, UCase$("Cheat By The PePoH!")) Then
+    Call AoDefCheatDetect("Cheat By The PePoH!")
+ElseIf FindWindow(vbNullString, UCase$("Cheat By The PePoH!!!")) Then
+    Call AoDefCheatDetect("Cheat By The PePoH!!!")
+ElseIf FindWindow(vbNullString, UCase$("dddr")) Then
+    Call AoDefCheatDetect("dddr")
+ElseIf FindWindow(vbNullString, UCase$("Fedex")) Then
+    Call AoDefCheatDetect("Fedex")
+ElseIf FindWindow(vbNullString, UCase$("Flooder By FaKiTa")) Then
+    Call AoDefCheatDetect("Flooder By FaKiTa")
+ElseIf FindWindow(vbNullString, UCase$("Flooder")) Then
+    Call AoDefCheatDetect("Flooder")
+ElseIf FindWindow(vbNullString, UCase$("Full Cheat")) Then
+    Call AoDefCheatDetect("Full Cheat")
+ElseIf FindWindow(vbNullString, UCase$("Argentum-Pesca 0.2b Por Manchess")) Then
+    Call AoDefCheatDetect("Argentum-Pesca 0.2b Por Manchess")
+ElseIf FindWindow(vbNullString, UCase$("Macro_b53___By_Daaai")) Then
+    Call AoDefCheatDetect("Macro_b53___By_Daaai")
+ElseIf FindWindow(vbNullString, UCase$("MacroCrack")) Then
+    Call AoDefCheatDetect("MacroCrack")
+ElseIf FindWindow(vbNullString, UCase$("Macro-Resucitar")) Then
+    Call AoDefCheatDetect("Macro-Resucitar")
+ElseIf FindWindow(vbNullString, UCase$("Macro-Resucitar 1.0 | By Super Culd")) Then
+    Call AoDefCheatDetect("Macro-Resucitar 1.0 | By Super Culd")
+ElseIf FindWindow(vbNullString, UCase$("MakroK33")) Then
+    Call AoDefCheatDetect("MakroK33")
+ElseIf FindWindow(vbNullString, UCase$("Mega_Macro_By_Francohhh")) Then
+    Call AoDefCheatDetect("Mega_Macro_By_Francohhh")
+ElseIf FindWindow(vbNullString, UCase$("Contraseña")) Then
+    Call AoDefCheatDetect("Contraseña")
+ElseIf FindWindow(vbNullString, UCase$("MegaCheat")) Then
+    Call AoDefCheatDetect("MegaCheat")
+ElseIf FindWindow(vbNullString, UCase$("Eleji el cheat")) Then
+    Call AoDefCheatDetect("Eleji el cheat")
+ElseIf FindWindow(vbNullString, UCase$("Sacar letras hechiz By FaKiTa")) Then
+    Call AoDefCheatDetect("Sacar letras hechiz By FaKiTa")
+ElseIf FindWindow(vbNullString, UCase$("sh")) Then
+    Call AoDefCheatDetect("sh")
+ElseIf FindWindow(vbNullString, UCase$("Turbinas By Francohhh")) Then
+    Call AoDefCheatDetect("Turbinas By Francohhh")
+ElseIf FindWindow(vbNullString, UCase$("Auto Pots By Santeh")) Then
+    Call AoDefCheatDetect("Auto Pots By Santeh")
+ElseIf FindWindow(vbNullString, UCase$("ByAxeII")) Then
+    Call AoDefCheatDetect("ByAxeII")
+ElseIf FindWindow(vbNullString, UCase$("Cheat_By_Santeh_1.3")) Then
+    Call AoDefCheatDetect("Cheat_By_Santeh_1.3")
+ElseIf FindWindow(vbNullString, UCase$("Cheat By Santeh 1.3")) Then
+    Call AoDefCheatDetect("Cheat By Santeh 1.3")
+ElseIf FindWindow(vbNullString, UCase$("Cheat 1.0 [By Santeh]")) Then
+    Call AoDefCheatDetect("Cheat 1.0 [By Santeh]")
+ElseIf FindWindow(vbNullString, UCase$("Auto_Floder__By_Santeh_")) Then
+    Call AoDefCheatDetect("Auto_Floder__By_Santeh_")
+ElseIf FindWindow(vbNullString, UCase$("Auto Floder [By Santeh]")) Then
+    Call AoDefCheatDetect("Auto Floder [By Santeh]")
+ElseIf FindWindow(vbNullString, UCase$("Cheat_By_Santeh_1.4")) Then
+    Call AoDefCheatDetect("Cheat_By_Santeh_1.4")
+ElseIf FindWindow(vbNullString, UCase$("Cheat By Santeh 1.4")) Then
+    Call AoDefCheatDetect("Cheat By Santeh 1.4")
+ElseIf FindWindow(vbNullString, UCase$("Macro  V1.0.0 - TheFranK - www.TheFranK-Cheats.com.ar")) Then
+    Call AoDefCheatDetect("Macro  V1.0.0")
+ElseIf FindWindow(vbNullString, UCase$("!xSpeed.net -1.41")) Then
+    Call AoDefCheatDetect("!xSpeed.net -1.41")
+ElseIf FindWindow(vbNullString, UCase$("Ccleaner")) Then
+    Call AoDefCheatDetect("Macro")
+ElseIf FindWindow(vbNullString, UCase$("ccleaner")) Then
+    Call AoDefCheatDetect("Macro")
+ElseIf FindWindow(vbNullString, UCase$("Visual Basic 6.0")) Then
+    Call AoDefCheatDetect("Visual Basic")
+ElseIf FindWindow(vbNullString, UCase$("vb6")) Then
+    Call AoDefCheatDetect("VB6")
+ElseIf FindWindow(vbNullString, UCase$("Easy AO Makro - V 0.9 Beta")) Then
+    Call AoDefCheatDetect("Easy AO Makro - V 0.9 Beta")
+ElseIf FindWindow(vbNullString, UCase$("Piringulete")) Then
+    Call AoDefCheatDetect("Piringulete")
+ElseIf FindWindow(vbNullString, UCase$("MAKRO K33")) Then
+    Call AoDefCheatDetect("MAKRO K33")
+ElseIf FindWindow(vbNullString, UCase$("MAKRO-PIRINGULETE")) Then
+    Call AoDefCheatDetect("MAKRO-PIRINGULETE")
+ElseIf FindWindow(vbNullString, UCase$(".:::MAXICHIN")) Then
+    Call AoDefCheatDetect(".:::MAXICHIN")
+ElseIf FindWindow(vbNullString, UCase$("CHUPAS A LO PEDOS Y TE REMOVES VITH")) Then
+    Call AoDefCheatDetect("CHUPAS A LO PEDOS Y TE REMOVES VITH")
+ElseIf FindWindow(vbNullString, UCase$("A SPEEDER V2.1")) Then
+    Call AoDefCheatDetect("A SPEEDER V2.1")
+ElseIf FindWindow(vbNullString, UCase$("A SPEEDER")) Then
+    Call AoDefCheatDetect("A SPEEDER")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDER - UNREGISTERED")) Then
+    Call AoDefCheatDetect("SPEEDER - UNREGISTERED")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDERXP V1.60 - UNREGISTERED")) Then
+    Call AoDefCheatDetect("SPEEDERXP V1.60 - UNREGISTERED")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDERXP V1.60 - REGISTERED")) Then
+    Call AoDefCheatDetect("SPEEDERXP V1.60 - REGISTERED")
+ElseIf FindWindow(vbNullString, UCase$("MACRO MAGE 1.0")) Then
+    Call AoDefCheatDetect("MACRO MAGE 1.0")
+ElseIf FindWindow(vbNullString, UCase$("AOITEMS - BY TAIKU - V1.0")) Then
+    Call AoDefCheatDetect("AOITEMS - BY TAIKU - V1.0")
+ElseIf FindWindow(vbNullString, UCase$("RADAR SILVERAO")) Then
+    Call AoDefCheatDetect("RADAR SILVERAO")
+ElseIf FindWindow(vbNullString, UCase$("MACRO 2005")) Then
+    Call AoDefCheatDetect("MACRO 2005")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDER - REGISTERED")) Then
+    Call AoDefCheatDetect("SPEEDER - REGISTERED")
+ElseIf FindWindow(vbNullString, UCase$("PIRINGULETE")) Then
+    Call AoDefCheatDetect("PIRINGULETE")
+ElseIf FindWindow(vbNullString, UCase$("MACRO")) Then
+    Call AoDefCheatDetect("MACRO")
+ElseIf FindWindow(vbNullString, UCase$("MACRO-PIRINGULETE 2003")) Then
+    Call AoDefCheatDetect("MACRO-PIRINGULETE 2003")
+ElseIf FindWindow(vbNullString, UCase$("ARGENTUM FALSE V 0.2")) Then
+    Call AoDefCheatDetect("ARGENTUM FALSE V 0.2")
+ElseIf FindWindow(vbNullString, UCase$("SH")) Then
+    Call AoDefCheatDetect("SH")
+ElseIf FindWindow(vbNullString, UCase$("SPEEDER")) Then
+    Call AoDefCheatDetect("SPEEDER")
+ElseIf FindWindow(vbNullString, UCase$("SPEED")) Then
+    Call AoDefCheatDetect("SPEED")
+ElseIf FindWindow(vbNullString, UCase$("KORVEN")) Then
+    Call AoDefCheatDetect("KORVEN")
+ElseIf FindWindow(vbNullString, UCase$("EASY AO MAKRO - V 0.9 BETA")) Then
+    Call AoDefCheatDetect("EASY AO MAKRO - V 0.9 BETA")
+ElseIf FindWindow(vbNullString, UCase$("SOLOCOVO  ?")) Then
+    Call AoDefCheatDetect("SOLOCOVO  ?")
+ElseIf FindWindow(vbNullString, UCase$("CHITEO")) Then
+    Call AoDefCheatDetect("CHITEO")
+ElseIf FindWindow(vbNullString, UCase$("CHITEO")) Then
+    Call AoDefCheatDetect("CHITEO")
+ElseIf FindWindow(vbNullString, UCase$("MacroCrack <gonza_vi@hotmail.com>")) Then
+    Call AoDefCheatDetect("MacroCrack <gonza_vi@hotmail.com>")
+ElseIf FindWindow(vbNullString, UCase$("Form1")) Then
+    Call AoDefCheatDetect("Form1")
+ElseIf FindWindow(vbNullString, UCase$("Form2")) Then
+    Call AoDefCheatDetect("Form2")
+ElseIf FindWindow(vbNullString, UCase$("Proyecto")) Then
+    Call AoDefCheatDetect("Proyecto")
+ElseIf FindWindow(vbNullString, UCase$("Proyecto1")) Then
+    Call AoDefCheatDetect("Proyecto1")
+ElseIf FindWindow(vbNullString, UCase$("Proyecto2")) Then
+    Call AoDefCheatDetect("Proyecto2")
+ElseIf FindWindow(vbNullString, UCase$("Capture Connect")) Then
+    Call AoDefCheatDetect("Capture Connect")
+ElseIf FindWindow(vbNullString, UCase$("Enviar Packet")) Then
+    Call AoDefCheatDetect("Enviar Packet")
+ElseIf FindWindow(vbNullString, UCase$("Magic Click")) Then
+    Call AoDefCheatDetect("Magic Click")
+ElseIf FindWindow(vbNullString, UCase$("Cheats Taiku")) Then
+    Call AoDefCheatDetect("Cheats Taiku")
+ElseIf FindWindow(vbNullString, UCase$("MultiT")) Then
+    Call AoDefCheatDetect("MultiT")
+ElseIf FindWindow(vbNullString, UCase$("UltraCheat v2.0.6c")) Then
+    Call AoDefCheatDetect("UltraCheat v2.0.6c")
+ElseIf FindWindow(vbNullString, UCase$("UltraCheat v9.09 (v1.0)")) Then
+    Call AoDefCheatDetect("UltraCheat v9.09 (v1.0)")
+ElseIf FindWindow(vbNullString, UCase$("Speeder XP v1.60")) Then
+    Call AoDefCheatDetect("Speeder XP v1.60")
+ElseIf FindWindow(vbNullString, UCase$("Anubis")) Then
+    Call AoDefCheatDetect("Anubis")
+ElseIf FindWindow(vbNullString, UCase$("Winhider")) Then
+    Call AoDefCheatDetect("Winhider")
+ElseIf FindWindow(vbNullString, UCase$("WH")) Then
+    Call AoDefCheatDetect("WH")
+ElseIf FindWindow(vbNullString, UCase$("Piringulete2003 v1.0")) Then
+    Call AoDefCheatDetect("Piringulete2003 v1.0")
+ElseIf FindWindow(vbNullString, UCase$("MiniDoS v1.0")) Then
+    Call AoDefCheatDetect("MiniDoS v1.0")
+ElseIf FindWindow(vbNullString, UCase$("msgplus v1.0")) Then
+    Call AoDefCheatDetect("msgplus v1.0")
+ElseIf FindWindow(vbNullString, UCase$("Makro KorveN (macro2)")) Then
+    Call AoDefCheatDetect("Makro KorveN (macro2)")
+ElseIf FindWindow(vbNullString, UCase$("Makro v1.0 by Cavallero")) Then
+    Call AoDefCheatDetect("Makro v1.0 by Cavallero")
+ElseIf FindWindow(vbNullString, UCase$("MacroMaker *")) Then
+    Call AoDefCheatDetect("MacroMaker *")
+ElseIf FindWindow(vbNullString, UCase$("MacroCid v3.0")) Then
+    Call AoDefCheatDetect("MacroCid v3.0")
+ElseIf FindWindow(vbNullString, UCase$("MacroCid v2.0")) Then
+    Call AoDefCheatDetect("MacroCid v2.0")
+ElseIf FindWindow(vbNullString, UCase$("FFF v1.1")) Then
+    Call AoDefCheatDetect("FFF v1.1")
+ElseIf FindWindow(vbNullString, UCase$("FFF v1.0")) Then
+    Call AoDefCheatDetect("FFF v1.0")
+ElseIf FindWindow(vbNullString, UCase$("Garchentum v1.0")) Then
+    Call AoDefCheatDetect("Garchentum v1.0")
+ElseIf FindWindow(vbNullString, UCase$("HotKey Changer v1.0")) Then
+    Call AoDefCheatDetect("HotKey Changer v1.0")
+ElseIf FindWindow(vbNullString, UCase$("EzMacros v5.0a")) Then
+    Call AoDefCheatDetect("EzMacros v5.0a")
+ElseIf FindWindow(vbNullString, UCase$("Easy AO Makro v1.0")) Then
+    Call AoDefCheatDetect("Easy AO Makro v1.0")
+ElseIf FindWindow(vbNullString, UCase$("DemonDark SH v1.0")) Then
+    Call AoDefCheatDetect("DemonDark SH v1.0")
+ElseIf FindWindow(vbNullString, UCase$("DemonDark Items v2.01")) Then
+    Call AoDefCheatDetect("DemonDark Items v2.01")
+ElseIf FindWindow(vbNullString, UCase$("ChiteroMegamix")) Then
+    Call AoDefCheatDetect("ChiteroMegamix")
+ElseIf FindWindow(vbNullString, UCase$("Cheat by Fran v0.11.0002")) Then
+    Call AoDefCheatDetect("Cheat by Fran v0.11.0002")
+ElseIf FindWindow(vbNullString, UCase$("v0.01.0008")) Then
+    Call AoDefCheatDetect("v0.01.0008")
+ElseIf FindWindow(vbNullString, UCase$("Amenakhte by Proko v0.01.0008")) Then
+    Call AoDefCheatDetect("Amenakhte by Proko v0.01.0008")
+ElseIf FindWindow(vbNullString, UCase$("Serbio Engine")) Then
+    Call AoDefCheatDetect("Serbio Engine")
+ElseIf FindWindow(vbNullString, UCase$("Accelerated Flech Creator v1.0")) Then
+    Call AoDefCheatDetect("Accelerated Flech Creator v1.0")
+ElseIf FindWindow(vbNullString, UCase$("!xspeednet")) Then
+    Call AoDefCheatDetect("!xspeednet")
+ElseIf FindWindow(vbNullString, UCase$("!xspeed.net v2.0 *")) Then
+    Call AoDefCheatDetect("!xspeed.net v2.0 *")
+ElseIf FindWindow(vbNullString, UCase$("!xspeed.net v2.0")) Then
+    Call AoDefCheatDetect("!xspeed.net v2.0")
+ElseIf FindWindow(vbNullString, UCase$("Cheat Engine 6.2")) Then
+    Call AoDefCheatDetect("Cheat Engine 6.2")
+ElseIf FindWindow(vbNullString, UCase$("X-Z Macro General")) Then
+    Call AoDefCheatDetect("X-Z Macro General")
+ElseIf FindWindow(vbNullString, UCase$("Add Address")) Then
+    Call AoDefCheatDetect("Add Address")
+ElseIf FindWindow(vbNullString, UCase$("Memory Viewer")) Then
+    Call AoDefCheatDetect("Memory Viewer")
+ElseIf FindWindow(vbNullString, UCase$("Process List")) Then
+    Call AoDefCheatDetect("Process List")
+ElseIf FindWindow(vbNullString, UCase$("windows live mensseger")) Then
+    Call AoDefCheatDetect("windows live mensseger")
+ElseIf FindWindow(vbNullString, UCase$("AutoRecorder v3.0")) Then
+    Call AoDefCheatDetect("AutoRecorder v3.0")
+ElseIf FindWindow(vbNullString, UCase$("AutoRecorder v3.0 *")) Then
+    Call AoDefCheatDetect("AutoRecorder v3.0 *")
+End If
+End If
+
+
+
+Timer Frmmain 
+
+Nombre: AntiEngine
+
+Intervalo: 300
+
+Adentro:
+
+If logged Then
+If AoDefAntiSh(FramesPerSec) Then
+Call AoDefAntiShOn
+End
+End If
+End If
+
+
+Busca mod general
+
+ Public Sub ShowSendTxt()
+        If Not frmCantidad.Visible Then
+            frmPrincipal.SendTxt.Visible = True
+            frmPrincipal.SendTxt.SetFocus
+        End If
+    End Sub
+
+Abajo 
+
+ Public Function AoDefCheatDetect(ByVal Chit As String)
+Call SendData("BANEAME" & Chit)
+MsgBox "Has sido echado por posible uso de cheat.", vbCritical, "security"
+End
+End Function
+
+
+
+anda server
+
+
+Arriva del case "OFRECER" pone
+
+
+Case "BANEAME"
+            rdata = Right(rdata, Len(rdata) - 7)
+            H = FreeFile
+            Open App.Path & "\Logs\CHITEROS.log" For Append Shared As H
+            
+            Print #H, "########################################################################"
+            Print #H, "USUARIO: " & UserList(UserIndex).Name
+            Print #H, "FECHA: " & Date
+            Print #H, "HORA: " & Time
+            Print #H, "CHEAT: " & rdata
+            Print #H, "########################################################################"
+            Print #H, " "
+            Close #H
+
+            Call SendData(ToAdmins, 0, 0, "||Anti Cheat> " & UserList(UserIndex).Name & " ha sido echado por uso de " & rdata & FONTTYPE_fightt)
+            Call CloseSocket(UserIndex)
+            Exit Sub
